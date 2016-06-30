@@ -8,4 +8,4 @@ services:
     symfony2_economic.soap_api_service:
         class: '%symfony2_economic.soap_api_service.class%'
         arguments:
-            - symfony2_ecomomic_config: '%symfony2_ecomomic_config%'
+            - symfony2_economic_config: '%symfony2_economic_config%'
