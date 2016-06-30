@@ -1,4 +1,5 @@
 <?php
+
 namespace Spoort\Bundle\Symfony2EconomicBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
