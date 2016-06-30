@@ -1,6 +1,32 @@
 parameters:
     # entities
+    symfony2_economic.debtor_entity.class: Spoort\Bundle\Symfony2EconomicBundle\Entity\Debtor
+    symfony2_economic.creditor_entity.class: Spoort\Bundle\Symfony2EconomicBundle\Entity\Creditor
+    symfony2_economic.cash_book_entity.class: Spoort\Bundle\Symfony2EconomicBundle\Entity\CashBook
 
+    symfony2_economic.account_handle_entity.class: Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\AccountHandle
+    symfony2_economic.attention_handle_entity.class: Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\AttentionHandle
+    symfony2_economic.capitalise_handle_entity.class: Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\CapitaliseHandle
+    symfony2_economic.cash_book_handle_entity.class: Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\CashBookHandle
+    symfony2_economic.cost_type_handle_entity.class: Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\CostTypeHandle
+    symfony2_economic.creditor_group_handle_entity.class: Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\CreditorGroupHandle
+    symfony2_economic.currency_handle_entity.class: Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\CurrencyHandle
+    symfony2_economic.debtor_group_handle_entity.class: Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\DebtorGroupHandle
+    symfony2_economic.debtor_handle_entity.class: Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\DebtorHandle
+    symfony2_economic.department_handle_entity.class: Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\DepartmentHandle
+    symfony2_economic.distribution_key_handle_entity.class: Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\DistributionKeyHandle
+    symfony2_economic.employee_handle_entity.class: Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\EmployeeHandle
+    symfony2_economic.layout_handle_entity.class: Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\LayoutHandle
+    symfony2_economic.location_handle_entity.class: Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\LocationHandle
+    symfony2_economic.our_reference_handle_entity.class: Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\OurReferenceHandle
+    symfony2_economic.payment_type_handle_entity.class: Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\PaymentTypeHandle
+    symfony2_economic.price_group_handle_entity.class: Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\PriceGroupHandle
+    symfony2_economic.project_handle_entity.class: Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\ProjectHandle
+    symfony2_economic.term_of_payment_handle_entity.class: Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\TermOfPaymentHandle
+    symfony2_economic.your_reference_handle_entity.class: Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\YourReferenceHandle
+
+    symfony2_economic.cash_book_entry_type_enum_entity.class: Spoort\Bundle\Symfony2EconomicBundle\Entity\Enum\CashBookEntryType
+    symfony2_economic.vat_zone_entity.class: Spoort\Bundle\Symfony2EconomicBundle\Entity\Enum\VatZone
 
     # services
     symfony2_economic.soap_api_service.class: Spoort\Bundle\Symfony2EconomicBundle\Services\SoapApi
