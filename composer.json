@@ -1,0 +1,21 @@
+{
+  "name": "SPOORT/Symfony2EconomicBundle",
+  "version": "0.1",
+  "description": "Integration between Symfony2 and e-conomic.dk",
+  "keywords": ["e-conomic.dk", "symfony2", "SPOORT International ApS", "GoSpoort"],
+  "type": "symfony-bundle",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "SPOORT International ApS",
+      "email": "tech@gospoort.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.0.0",
+    "symfony/symfony": "2.8.*"
+  },
+  "autoload":     {
+    "psr-4": { "Spoort\\Bundle\\Symfony2EconomicBundle\\": "" }
+  }
+}
