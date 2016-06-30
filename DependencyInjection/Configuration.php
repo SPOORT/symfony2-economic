@@ -19,10 +19,14 @@ class Configuration implements ConfigurationInterface
         $rootNode = $treeBuilder->root('symfony2_economic');
         $rootNode
             ->children()
-                ->scalarNode('agreement')->defaultValue(null)->end()
+                ->scalarNode('wsdl_url')->defaultValue('https://api.e-conomic.com/secure/api1/EconomicWebService.asmx?wsdl')->end()
+
+                ->scalarNode('agreement_number')->defaultValue(null)->end()
                 ->scalarNode('username')->defaultValue(null)->end()
                 ->scalarNode('password')->defaultValue(null)->end()
-                ->scalarNode('url')->defaultValue(null)->end()
+
+                ->scalarNode('token')->defaultValue(null)->end()
+                ->scalarNode('app_token')->defaultValue(null)->end()
             ->end();
 
         return $treeBuilder;

@@ -23,10 +23,16 @@ class ClubAccountEconomicExtension extends Extension
 
         $loader->load('services.yml');
 
-        $container->setParameter('symfony2_economic.enabled', $config['enabled']);
-        $container->setParameter('symfony2_economic.agreement', $config['agreement']);
+        // Url (WSDL)
+        $container->setParameter('symfony2_economic.wsdl_url', $config['wsdl_url']);
+
+        // Connect
+        $container->setParameter('symfony2_economic.agreement_number', $config['agreement_number']);
         $container->setParameter('symfony2_economic.username', $config['username']);
         $container->setParameter('symfony2_economic.password', $config['password']);
-        $container->setParameter('symfony2_economic.url', $config['url']);
+
+        // ConnectWithToken
+        $container->setParameter('symfony2_economic.token', $config['token']);
+        $container->setParameter('symfony2_economic.app_token', $config['app_token']);
     }
 }
