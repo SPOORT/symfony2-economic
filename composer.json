@@ -1,5 +1,5 @@
 {
-  "name": "SPOORT/Symfony2EconomicBundle",
+  "name": "Spoort/symfony2-economic-bundle",
   "version": "0.1",
   "description": "Integration between Symfony2 and e-conomic.dk",
   "keywords": ["e-conomic.dk", "symfony2", "SPOORT International ApS", "GoSpoort"],
