@@ -31,14 +31,16 @@ class SoapApi
      */
     public function __construct(array $options)
     {
-        $this->soapWsdlUrl = $options['symfony2_ecconomic.wsdl_url'];
+        $config = $options['symfony2_economic_config'];
 
-        $this->soapAgreementNumber = $options['symfony2_ecconomic.agreement_number'];
-        $this->soapUsername = $options['symfony2_ecconomic.username'];
-        $this->soapPassword = $options['symfony2_ecconomic.password'];
+        $this->soapWsdlUrl = $config['wsdl_url'];
 
-        $this->soapToken = $options['symfony2_ecconomic.token'];
-        $this->soapAppToken = $options['symfony2_ecconomic.app_token'];
+        $this->soapAgreementNumber = $config['agreement_number'];
+        $this->soapUsername = $config['username'];
+        $this->soapPassword = $config['password'];
+
+        $this->soapToken = $config['token'];
+        $this->soapAppToken = $config['app_token'];
 
         // Create SOAPClient request
         $this->soapClient = new \SoapClient($this->soapWsdlUrl, ['trace' => 1, 'exceptions' => 1]);

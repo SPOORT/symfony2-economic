@@ -10,7 +10,7 @@ use Symfony\Component\DependencyInjection\Loader;
  * This is the class that loads and manages your bundle configuration
  * To learn more see {@link http://symfony.com/doc/current/cookbook/bundles/extension.html}
  */
-class ClubAccountEconomicExtension extends Extension
+class Symfony2EconomicExtension extends Extension
 {
     /**
      * {@inheritDoc}
@@ -23,16 +23,6 @@ class ClubAccountEconomicExtension extends Extension
 
         $loader->load('services.yml');
 
-        // Url (WSDL)
-        $container->setParameter('symfony2_economic.wsdl_url', $config['wsdl_url']);
-
-        // Connect
-        $container->setParameter('symfony2_economic.agreement_number', $config['agreement_number']);
-        $container->setParameter('symfony2_economic.username', $config['username']);
-        $container->setParameter('symfony2_economic.password', $config['password']);
-
-        // ConnectWithToken
-        $container->setParameter('symfony2_economic.token', $config['token']);
-        $container->setParameter('symfony2_economic.app_token', $config['app_token']);
+        $container->setParameter('symfony2_economic_config', $config);
     }
 }
