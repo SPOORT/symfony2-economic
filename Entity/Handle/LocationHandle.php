@@ -26,7 +26,7 @@ class LocationHandle
 
     /**
      * @param int $id
-     * @return CreditorHandle
+     * @return self
      */
     public function setId($id)
     {

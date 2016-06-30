@@ -27,7 +27,7 @@ class CurrencyHandle
 
     /**
      * @param string $code
-     * @return CurrencyHandle
+     * @return self
      */
     public function setCode($code)
     {

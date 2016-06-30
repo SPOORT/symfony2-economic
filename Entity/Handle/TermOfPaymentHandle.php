@@ -26,7 +26,7 @@ class TermOfPaymentHandle
 
     /**
      * @param int $id
-     * @return TermOfPaymentHandle
+     * @return self
      */
     public function setId($id)
     {

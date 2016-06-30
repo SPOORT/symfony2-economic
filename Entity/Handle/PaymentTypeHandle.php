@@ -27,7 +27,7 @@ class PaymentTypeHandle
 
     /**
      * @param string $number
-     * @return DefaultPaymentTypeHandle
+     * @return self
      */
     public function setNumber($number)
     {
