@@ -27,7 +27,7 @@ class DebtorHandle
 
     /**
      * @param int $number
-     * @return CreditorHandle
+     * @return self
      */
     public function setNumber($number)
     {

@@ -93,6 +93,22 @@ class Creditor
     private $defaultInvoiceText;
 
     /**
+     * Creditor constructor.
+     */
+    public function __construct()
+    {
+        $this->setHandle(new CreditorHandle());
+        $this->setAttentionHandle(new AttentionHandle());
+        $this->setCurrencyHandle(new CurrencyHandle());
+        $this->setCreditorGroupHandle(new CreditorGroupHandle());
+        $this->setOurReferenceHandle(new OurReferenceHandle());
+        $this->setYourReferenceHandle(new YourReferenceHandle());
+        $this->setAutoContraAccountHandle(new AccountHandle());
+        $this->setDefaultPaymentTypeHandle(new PaymentTypeHandle());
+        $this->setTermOfPaymentHandle(new TermOfPaymentHandle());
+    }
+
+    /**
      * @return CreditorHandle
      */
     public function getHandle()
