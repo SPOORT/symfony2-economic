@@ -30,9 +30,10 @@ parameters:
 
     # services
     symfony2_economic.soap_api_service.class: Spoort\Bundle\Symfony2EconomicBundle\Services\SoapApi
-    symfony2_economic.creditor_service.class: Spoort\Bundle\Symfony2EconomicBundle\Services\CreditorService
-    symfony2_economic.debtor_service.class: Spoort\Bundle\Symfony2EconomicBundle\Services\DebtorService
-    symfony2_economic.cash_book_entry_service.class: Spoort\Bundle\Symfony2EconomicBundle\Services\CashBookEntryService
+    symfony2_economic.creditor_service.class: Spoort\Bundle\Symfony2EconomicBundle\Services\Creditor
+    symfony2_economic.debtor_service.class: Spoort\Bundle\Symfony2EconomicBundle\Services\Debtor
+    symfony2_economic.cash_book_service.class: Spoort\Bundle\Symfony2EconomicBundle\Services\CashBook
+    symfony2_economic.cash_book_entry_service.class: Spoort\Bundle\Symfony2EconomicBundle\Services\CashBookEntry
 
 services:
     symfony2_economic.soap_api_service:
@@ -47,6 +48,11 @@ services:
 
     symfony2_economic.debtor_service:
         class: '%symfony2_economic.debtor_service.class%'
+        arguments:
+            - '@symfony2_economic.soap_api_service'
+
+    symfony2_economic.cash_book_service:
+        class: '%symfony2_economic.cash_book_service.class%'
         arguments:
             - '@symfony2_economic.soap_api_service'
 
