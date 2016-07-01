@@ -42,3 +42,24 @@ class AppKernel extends Kernel
     // ...
 }
 ```
+
+Step 3: Set configuration
+-------------------------
+
+In config.yml add following:
+
+```
+symfony2_economic:
+    wsdl_url: <economic-wsdl-url>
+
+    # If you like to connect with username/password then set agreement_numbe, username and password
+    agreement_number: <economic-agreement-number>
+    username: <economic-username>
+    password: <economic-password>
+
+    # or
+
+    # If you would like to connect via token then set token and app_token
+    token: <economic-token>
+    app_token: <economic-app-token>
+```
