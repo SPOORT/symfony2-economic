@@ -1,33 +1,50 @@
 <?php
-/**
- * This file is part of SPOORT International ApS
- * and belongs to SPOORT International ApS.
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
-
 
 namespace Spoort\Bundle\Symfony2EconomicBundle\Entity;
 
-
-use Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\AccountHandle;
 use Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\AttentionHandle;
-use Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\CreditorGroupHandle;
-use Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\CreditorHandle;
 use Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\CurrencyHandle;
 use Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\DebtorGroupHandle;
 use Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\DebtorHandle;
 use Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\LayoutHandle;
 use Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\LocationHandle;
 use Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\OurReferenceHandle;
-use Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\PaymentTypeHandle;
 use Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\PriceGroupHandle;
 use Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\TermOfPaymentHandle;
 use Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\YourReferenceHandle;
 
 class Debtor
 {
+    const DEBTOR_HANDLE = 'Handle';
+    const DEBTOR_NUMBER = 'Number';
+    const DEBTOR_DEBTOR_GROUP_HANDLE = 'DebtorGroupHandle';
+    const DEBTOR_NAME = 'Name';
+    const DEBTOR_VAT_ZONE = 'VatZone';
+    const DEBTOR_EXTENDED_VAT_ZONE = 'ExtendedVatZone';
+    const DEBTOR_CURRENCY_HANDLE = 'CurrencyHandle';
+    const DEBTOR_PRICE_GROUP_HANDLE = 'PriceGroupHandle';
+    const DEBTOR_IS_ACCESSIBLE = 'IsAccessible';
+    const DEBTOR_EAN = 'Ean';
+    const DEBTOR_PUBLIC_ENTRY_NUMBER = 'PublicEntryNumber';
+    const DEBTOR_EMAIL = 'Email';
+    const DEBTOR_TELEPHONE_AND_FAX_NUMBER = 'TelephoneAndFaxNumber';
+    const DEBTOR_WEBSITE = 'Website';
+    const DEBTOR_ADDRESS = 'Address';
+    const DEBTOR_POSTAL_CODE = 'PostalCode';
+    const DEBTOR_CITY = 'City';
+    const DEBTOR_COUNTRY = 'Country';
+    const DEBTOR_CREDIT_MAXIMUM = 'CreditMaximum';
+    const DEBTOR_VAT_NUMBER = 'VatNumber';
+    const DEBTOR_COUNTY = 'County';
+    const DEBTOR_CIN_NUMBER = 'CINumber';
+    const DEBTOR_TERM_OF_PAYMENT_HANDLE = 'TermOfPaymentHandle';
+    const DEBTOR_LAYOUT_HANDLE = 'LayoutHandle';
+    const DEBTOR_ATTENTION_HANDLE = 'AttentionHandle';
+    const DEBTOR_YOUR_REFERENCE_HANDLE = 'YourReferenceHandle';
+    const DEBTOR_OUR_REFERENCE_HANDLE = 'OurReferenceHandle';
+    const DEBTOR_BALANCE = 'Balance';
+    const DEBTOR_DEFAULT_DELIVERY_LOCATION_HANDLE = 'DefaultDeliveryLocationHandle';
+
     /** @var $handle DebtorHandle */
     private $handle;
 

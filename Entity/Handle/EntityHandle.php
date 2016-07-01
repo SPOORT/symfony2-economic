@@ -3,9 +3,8 @@
 namespace Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle;
 
 
-class AccountHandle
+class EntityHandle
 {
-
     /** @var $number integer */
     private $number;
 
