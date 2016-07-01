@@ -3,10 +3,9 @@
 namespace Spoort\Bundle\Symfony2EconomicBundle\Service;
 
 use Doctrine\Instantiator\Exception\InvalidArgumentException;
-use Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\DebtorHandle as DebtorHandleEntity;
-use Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\DebtorHandle;
 use Spoort\Bundle\Symfony2EconomicBundle\Service\SoapApi as SoapApiService;
 use Spoort\Bundle\Symfony2EconomicBundle\Entity\Debtor as DebtorEntity;
+use Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\DebtorHandle as DebtorHandleEntity;
 
 class Debtor
 {
@@ -27,7 +26,7 @@ class Debtor
      * @param $number
      * @return mixed
      */
-    public function findDebtorByCinNumber($number)
+    public function findDebtorByCiNumber($number)
     {
 
         return $this->soapApiService
@@ -138,6 +137,7 @@ class Debtor
      * @param DebtorHandleEntity $debtorHandleEntity
      * @param $property
      * @return mixed
+     * @throws InvalidArgumentException
      */
     public function getDebtorProperty(DebtorHandleEntity $debtorHandleEntity, $property)
     {
@@ -215,7 +215,7 @@ class Debtor
             DebtorEntity::DEBTOR_CREDIT_MAXIMUM => $debtorEntity->getCreditMaximum(),
             DebtorEntity::DEBTOR_VAT_NUMBER => $debtorEntity->getVatNumber(),
             DebtorEntity::DEBTOR_COUNTY => $debtorEntity->getCounty(),
-            DebtorEntity::DEBTOR_CIN_NUMBER => $debtorEntity->getCiNumber(),
+            DebtorEntity::DEBTOR_CI_NUMBER => $debtorEntity->getCiNumber(),
             DebtorEntity::DEBTOR_TERM_OF_PAYMENT_HANDLE => $debtorEntity->getTermOfPaymentHandle(),
             DebtorEntity::DEBTOR_LAYOUT_HANDLE => $debtorEntity->getLayoutHandle(),
             DebtorEntity::DEBTOR_ATTENTION_HANDLE => $debtorEntity->getAttentionHandle(),
@@ -226,9 +226,9 @@ class Debtor
         ];
 
         return $this->soapApiService
-                    ->getConnection()
-                    ->Debtor_CreateFromData(['data' => $data])
-                    ->Debtor_CreateFromDataResult;
+            ->getConnection()
+            ->Debtor_CreateFromData(['data' => $data])
+            ->Debtor_CreateFromDataResult;
     }
 
     /**
@@ -265,7 +265,7 @@ class Debtor
             DebtorEntity::DEBTOR_CREDIT_MAXIMUM => $debtorEntity->getCreditMaximum(),
             DebtorEntity::DEBTOR_VAT_NUMBER => $debtorEntity->getVatNumber(),
             DebtorEntity::DEBTOR_COUNTY => $debtorEntity->getCounty(),
-            DebtorEntity::DEBTOR_CIN_NUMBER => $debtorEntity->getCiNumber(),
+            DebtorEntity::DEBTOR_CI_NUMBER => $debtorEntity->getCiNumber(),
             DebtorEntity::DEBTOR_TERM_OF_PAYMENT_HANDLE => $debtorEntity->getTermOfPaymentHandle(),
             DebtorEntity::DEBTOR_LAYOUT_HANDLE => $debtorEntity->getLayoutHandle(),
             DebtorEntity::DEBTOR_ATTENTION_HANDLE => $debtorEntity->getAttentionHandle(),
@@ -276,9 +276,9 @@ class Debtor
         ];
 
         return $this->soapApiService
-                    ->getConnection()
-                    ->Debtor_UpdateFromData(['data' => $data])
-                    ->Debtor_UpdateFromDataResult;
+            ->getConnection()
+            ->Debtor_UpdateFromData(['data' => $data])
+            ->Debtor_UpdateFromDataResult;
     }
 
     /**
@@ -297,7 +297,7 @@ class Debtor
 
     /**
      * Creates a new debtor contact
-     * @param DebtorHandle $debtorHandleEntity
+     * @param DebtorHandleEntity $debtorHandleEntity
      * @param $name
      * @return mixed
      */

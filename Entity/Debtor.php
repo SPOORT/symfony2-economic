@@ -36,7 +36,7 @@ class Debtor
     const DEBTOR_CREDIT_MAXIMUM = 'CreditMaximum';
     const DEBTOR_VAT_NUMBER = 'VatNumber';
     const DEBTOR_COUNTY = 'County';
-    const DEBTOR_CIN_NUMBER = 'CINumber';
+    const DEBTOR_CI_NUMBER = 'CINumber';
     const DEBTOR_TERM_OF_PAYMENT_HANDLE = 'TermOfPaymentHandle';
     const DEBTOR_LAYOUT_HANDLE = 'LayoutHandle';
     const DEBTOR_ATTENTION_HANDLE = 'AttentionHandle';

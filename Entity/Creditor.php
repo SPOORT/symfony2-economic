@@ -14,6 +14,30 @@ use Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\YourReferenceHandle;
 
 class Creditor
 {
+    const CREDITOR_HANDLE = 'Handle';
+    const CREDITOR_NUMBER = 'Number';
+    const CREDITOR_CREDITOR_GROUP_HANDLE = 'CreditorGroupHandle';
+    const CREDITOR_NAME = 'Name';
+    const CREDITOR_VAT_ZONE = 'VatZone';
+    const CREDITOR_CURRENCY_HANDLE = 'CurrencyHandle';
+    const CREDITOR_TERM_OF_PAYMENT_HANDLE = 'TermOfPaymentHandle';
+    const CREDITOR_IS_ACCESSIBLE = 'IsAccessible';
+    const CREDITOR_CI_NUMBER = 'CINumber';
+    const CREDITOR_EMAIL = 'Email';
+    const CREDITOR_ADDRESS = 'Address';
+    const CREDITOR_POSTAL_CODE = 'PostalCode';
+    const CREDITOR_CITY = 'City';
+    const CREDITOR_COUNTRY = 'Country';
+    const CREDITOR_BANK_ACCOUNT = 'BankAccount';
+    const CREDITOR_ATTENTION_HANDLE = 'AttentionHandle';
+    const CREDITOR_YOUR_REFERENCE_HANDLE = 'YourReferenceHandle';
+    const CREDITOR_OUR_REFERENCE_HANDLE = 'OurReferenceHandle';
+    const CREDITOR_DEFAULT_PAYMENT_TYPE_HANDLE = 'DefaultPaymentTypeHandle';
+    const CREDITOR_DEFAULT_PAYMENT_CREDITOR_ID_HANDLE = 'DefaultPaymentCreditorId';
+    const CREDITOR_COUNTY = 'County';
+    const CREDITOR_AUTO_CONTRA_ACCOUNT_HANDLE = 'AutoContraAccountHandle';
+    const CREDITOR_DEFAULT_INVOICE_TEXT = 'DefaultInvoiceText';
+
     /** @var $handle CreditorHandle */
     private $handle;
 
@@ -82,6 +106,9 @@ class Creditor
 
     /** @var $defaultInvoiceText string */
     private $defaultInvoiceText;
+
+    /** @var integer $defaultPaymentCreditorId */
+    private $defaultPaymentCreditorId;
 
     /**
      * Creditor constructor.
@@ -519,5 +546,22 @@ class Creditor
         return $this;
     }
 
+    /**
+     * @return int
+     */
+    public function getDefaultPaymentCreditorId()
+    {
+        return $this->defaultPaymentCreditorId;
+    }
 
+    /**
+     * @param int $defaultPaymentCreditorId
+     * @return Creditor
+     */
+    public function setDefaultPaymentCreditorId($defaultPaymentCreditorId)
+    {
+        $this->defaultPaymentCreditorId = $defaultPaymentCreditorId;
+
+        return $this;
+    }
 }
