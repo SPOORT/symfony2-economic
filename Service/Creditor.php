@@ -8,7 +8,7 @@ use Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\CreditorHandle as Credito
 
 class Creditor
 {
-    /** @var $soapApiService SoapApiService */
+    /** @var SoapApiService $soapApiService */
     private $soapApiService;
 
     /**

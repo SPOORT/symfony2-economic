@@ -29,11 +29,11 @@ parameters:
     symfony2_economic.vat_zone_entity.class: Spoort\Bundle\Symfony2EconomicBundle\Entity\Enum\VatZone
 
     # services
-    symfony2_economic.soap_api_service.class: Spoort\Bundle\Symfony2EconomicBundle\Services\SoapApi
-    symfony2_economic.creditor_service.class: Spoort\Bundle\Symfony2EconomicBundle\Services\Creditor
-    symfony2_economic.debtor_service.class: Spoort\Bundle\Symfony2EconomicBundle\Services\Debtor
-    symfony2_economic.cash_book_service.class: Spoort\Bundle\Symfony2EconomicBundle\Services\CashBook
-    symfony2_economic.cash_book_entry_service.class: Spoort\Bundle\Symfony2EconomicBundle\Services\CashBookEntry
+    symfony2_economic.soap_api_service.class: Spoort\Bundle\Symfony2EconomicBundle\Service\SoapApi
+    symfony2_economic.creditor_service.class: Spoort\Bundle\Symfony2EconomicBundle\Service\Creditor
+    symfony2_economic.debtor_service.class: Spoort\Bundle\Symfony2EconomicBundle\Service\Debtor
+    symfony2_economic.cash_book_service.class: Spoort\Bundle\Symfony2EconomicBundle\Service\CashBook
+    symfony2_economic.cash_book_entry_service.class: Spoort\Bundle\Symfony2EconomicBundle\Service\CashBookEntry
 
 services:
     symfony2_economic.soap_api_service:

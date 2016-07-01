@@ -8,7 +8,7 @@ use Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\CashBookHandle as CashBoo
 
 class CashBook
 {
-    /** @var $soapApiService SoapApiService */
+    /** @var SoapApiService $soapApiService */
     private $soapApiService;
 
     /**

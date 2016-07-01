@@ -9,7 +9,7 @@ use Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\DebtorHandle as DebtorHan
 
 class Debtor
 {
-    /** @var $soapApiService SoapApiService */
+    /** @var SoapApiService $soapApiService */
     private $soapApiService;
 
     /**
