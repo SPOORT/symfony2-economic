@@ -33,6 +33,6 @@ class CashBookEntry
             ->getConnection()
             ->CashBookEntry_GetData(['entityHandle' => $cashBookEntryHandleEntity]);
 
-        return null !== $result ? $result->CashBookEntry_GetDataResult : null;
+        return null !== $result ? new CashBookEntryEntity($result->CashBookEntry_GetDataResult) : null;
     }
 }

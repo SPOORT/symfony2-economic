@@ -132,6 +132,6 @@ class CashBook
             ->getConnection()
             ->CashBook_GetData(['entityHandle' => $cashBookHandleEntity]);
 
-        return null !== $result ? $result->CashBook_GetDataResult : null;
+        return null !== $result ? new CashBookEntity($result->CashBook_GetDataResult) : null;
     }
 }

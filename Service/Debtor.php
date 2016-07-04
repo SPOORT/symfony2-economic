@@ -374,6 +374,6 @@ class Debtor
             ->getConnection()
             ->Debtor_GetData(['entityHandle' => $debtorHandleEntity]);
 
-        return null !== $result ? $result->Debtor_GetDataResult : null;
+        return null !== $result ? new DebtorEntity($result->Debtor_GetDataResult) : null;
     }
 }

@@ -232,6 +232,6 @@ class Creditor
             ->getConnection()
             ->Creditor_GetData(['entityHandle' => $creditorHandleEntity]);
 
-        return null !== $result ? $result->Creditor_GetDataResult : null;
+        return null !== $result ? new CreditorEntity($result->Creditor_GetDataResult) : null;
     }
 }
