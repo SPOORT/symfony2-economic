@@ -26,22 +26,23 @@ class Debtor
      * @param $number
      * @return DebtorHandleEntity[]
      */
-    public function findDebtorByCiNumber($number)
+    public function findDebtorsByCiNumber($number)
     {
         $results = [];
         $data = $this->soapApiService
             ->getConnection()
-            ->Debtor_FindByCiNumber(['number' => $number]);
+            ->Debtor_FindByCiNumber(['number' => $number])
+            ->Debtor_FindByCiNumberResult;
 
-        if (null !== $data) {
-            if (is_array($data->Debtor_FindByCiNumberResult->DebtorHandle)) {
+        if (!empty((array) $data)) {
+            if (is_array($data->DebtorHandle)) {
                 // It's a collection of objects
-                foreach ($data->Debtor_FindByCiNumberResult->DebtorHandle as $d) {
+                foreach ($data->DebtorHandle as $d) {
                     $results[] = new DebtorHandleEntity($d);
                 }
             } else {
                 // Single object
-                $results[] = new DebtorHandleEntity($data->Debtor_FindByCiNumberResult->DebtorHandle);
+                $results[] = new DebtorHandleEntity($data->DebtorHandle);
             }
         }
 
@@ -53,22 +54,23 @@ class Debtor
      * @param $ean
      * @return DebtorHandleEntity[]
      */
-    public function findDebtorByEan($ean)
+    public function findDebtorsByEan($ean)
     {
         $results = [];
         $data = $this->soapApiService
             ->getConnection()
-            ->Debtor_FindByEan(['ean' => $ean]);
+            ->Debtor_FindByEan(['ean' => $ean])
+            ->Debtor_FindByEanResult;
 
-        if (null !== $data) {
-            if (is_array($data->Debtor_FindByEanResult->DebtorHandle)) {
+        if (!empty((array) $data)) {
+            if (is_array($data->DebtorHandle)) {
                 // It's a collection of objects
-                foreach ($data->Debtor_FindByEanResult->DebtorHandle as $d) {
+                foreach ($data->DebtorHandle as $d) {
                     $results[] = new DebtorHandleEntity($d);
                 }
             } else {
                 // Single object
-                $results[] = new DebtorHandleEntity($data->Debtor_FindByEanResult->DebtorHandle);
+                $results[] = new DebtorHandleEntity($data->DebtorHandle);
             }
         }
 
@@ -94,22 +96,23 @@ class Debtor
      * @param $name
      * @return DebtorHandleEntity[]
      */
-    public function findDebtorByName($name)
+    public function findDebtorsByName($name)
     {
         $results = [];
         $data = $this->soapApiService
             ->getConnection()
-            ->Debtor_FindByName(['name' => $name]);
+            ->Debtor_FindByName(['name' => $name])
+            ->Debtor_FindByNameResult;
 
-        if (null !== $data) {
-            if (is_array($data->Debtor_FindByNameResult->DebtorHandle)) {
+        if (!empty((array) $data)) {
+            if (is_array($data->DebtorHandle)) {
                 // It's a collection of objects
-                foreach ($data->Debtor_FindByNameResult->DebtorHandle as $d) {
+                foreach ($data->DebtorHandle as $d) {
                     $results[] = new DebtorHandleEntity($d);
                 }
             } else {
                 // Single object
-                $results[] = new DebtorHandleEntity($data->Debtor_FindByNameResult->DebtorHandle);
+                $results[] = new DebtorHandleEntity($data->DebtorHandle);
             }
         }
 
@@ -135,22 +138,23 @@ class Debtor
      * @param $partialName
      * @return DebtorHandleEntity[]
      */
-    public function findDebtorByPartialName($partialName)
+    public function findDebtorsByPartialName($partialName)
     {
         $results = [];
         $data = $this->soapApiService
             ->getConnection()
-            ->Debtor_FindByPartialName(['partialName' => $partialName]);
+            ->Debtor_FindByPartialName(['partialName' => $partialName])
+            ->Debtor_FindByPartialNameResult;
 
-        if (null !== $data) {
-            if (is_array($data->Debtor_FindByPartialNameResult->DebtorHandle)) {
+        if (!empty((array) $data)) {
+            if (is_array($data->DebtorHandle)) {
                 // It's a collection of objects
-                foreach ($data->Debtor_FindByPartialNameResult->DebtorHandle as $d) {
+                foreach ($data->DebtorHandle as $d) {
                     $results[] = new DebtorHandleEntity($d);
                 }
             } else {
                 // Single object
-                $results[] = new DebtorHandleEntity($data->Debtor_FindByPartialNameResult->DebtorHandle);
+                $results[] = new DebtorHandleEntity($data->DebtorHandle);
             }
         }
 
@@ -180,11 +184,12 @@ class Debtor
         $results = [];
         $data = $this->soapApiService
             ->getConnection()
-            ->Debtor_GetAll();
+            ->Debtor_GetAll()
+            ->Debtor_GetAllResult;
 
-        if (null !== $data) {
+        if (!empty((array) $data)) {
             // It's a collection of objects
-            foreach ($data->Debtor_GetAllResult->DebtorHandle as $d) {
+            foreach ($data->DebtorHandle as $d) {
                 $results[] = new DebtorHandleEntity($d);
             }
         }

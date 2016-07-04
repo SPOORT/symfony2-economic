@@ -57,11 +57,12 @@ class CashBook
         $results = [];
         $data = $this->soapApiService
             ->getConnection()
-            ->CashBook_GetAll();
+            ->CashBook_GetAll()
+            ->CashBook_GetAllResult;
 
-        if (null !== $data) {
+        if (!empty((array) $data)) {
             // It's a collection of objects
-            foreach ($data->CashBook_GetAllResult->CashBookHandle as $d) {
+            foreach ($data->CashBookHandle as $d) {
                 $results[] = new CashBookHandleEntity($d);
             }
         }

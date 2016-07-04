@@ -57,11 +57,12 @@ class Creditor
         $results = [];
         $data = $this->soapApiService
             ->getConnection()
-            ->Creditor_GetAll();
+            ->Creditor_GetAll()
+            ->Creditor_GetAllResult;
 
-        if (null !== $data) {
+        if (!empty((array) $data)) {
             // It's a collection of objects
-            foreach ($data->Creditor_GetAllResult->CreditorHandle as $d) {
+            foreach ($data->CreditorHandle as $d) {
                 $results[] = new CreditorHandleEntity($d);
             }
         }
