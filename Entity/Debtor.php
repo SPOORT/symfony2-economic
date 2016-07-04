@@ -312,7 +312,7 @@ class Debtor extends EconomicSoapEntity
     /**
      * @return boolean
      */
-    public function isIsAccessible()
+    public function getIsAccessible()
     {
         return $this->IsAccessible;
     }
