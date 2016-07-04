@@ -252,7 +252,7 @@ class Debtor
             DebtorEntity::DEBTOR_CURRENCY_HANDLE => $debtorEntity->getCurrencyHandle(),
             DebtorEntity::DEBTOR_PRICE_GROUP_HANDLE => $debtorEntity->getPriceGroupHandle(),
             // Mandatory input
-            DebtorEntity::DEBTOR_IS_ACCESSIBLE => $debtorEntity->isIsAccessible(),
+            DebtorEntity::DEBTOR_IS_ACCESSIBLE => $debtorEntity->getIsAccessible(),
             // Optional inputs
             DebtorEntity::DEBTOR_EAN => $debtorEntity->getEan(),
             DebtorEntity::DEBTOR_PUBLIC_ENTRY_NUMBER => $debtorEntity->getPublicEntryNumber(),
@@ -303,7 +303,7 @@ class Debtor
             DebtorEntity::DEBTOR_CURRENCY_HANDLE => $debtorEntity->getCurrencyHandle(),
             DebtorEntity::DEBTOR_PRICE_GROUP_HANDLE => $debtorEntity->getPriceGroupHandle(),
             // Mandatory input
-            DebtorEntity::DEBTOR_IS_ACCESSIBLE => $debtorEntity->isIsAccessible(),
+            DebtorEntity::DEBTOR_IS_ACCESSIBLE => $debtorEntity->getIsAccessible(),
             // Optional inputs
             DebtorEntity::DEBTOR_EAN => $debtorEntity->getEan(),
             DebtorEntity::DEBTOR_PUBLIC_ENTRY_NUMBER => $debtorEntity->getPublicEntryNumber(),

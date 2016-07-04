@@ -122,7 +122,7 @@ class Creditor
             CreditorEntity::CREDITOR_CURRENCY_HANDLE => $creditorEntity->getCurrencyHandle(),
             CreditorEntity::CREDITOR_TERM_OF_PAYMENT_HANDLE => $creditorEntity->getTermOfPaymentHandle(),
             // Mandatory input
-            CreditorEntity::CREDITOR_IS_ACCESSIBLE => $creditorEntity->isIsAccessible(),
+            CreditorEntity::CREDITOR_IS_ACCESSIBLE => $creditorEntity->getIsAccessible(),
             // Optional inputs
             CreditorEntity::CREDITOR_CI_NUMBER => $creditorEntity->getCiNumber(),
             CreditorEntity::CREDITOR_EMAIL => $creditorEntity->getEmail(),
@@ -167,7 +167,7 @@ class Creditor
             CreditorEntity::CREDITOR_CURRENCY_HANDLE => $creditorEntity->getCurrencyHandle(),
             CreditorEntity::CREDITOR_TERM_OF_PAYMENT_HANDLE => $creditorEntity->getTermOfPaymentHandle(),
             // Mandatory input
-            CreditorEntity::CREDITOR_IS_ACCESSIBLE => $creditorEntity->isIsAccessible(),
+            CreditorEntity::CREDITOR_IS_ACCESSIBLE => $creditorEntity->getIsAccessible(),
             // Optional inputs
             CreditorEntity::CREDITOR_CI_NUMBER => $creditorEntity->getCiNumber(),
             CreditorEntity::CREDITOR_EMAIL => $creditorEntity->getEmail(),
