@@ -23,14 +23,15 @@ class Creditor
     /**
      * Returns handle for creditors with a given name
      * @param $name
-     * @return CreditorHandleEntity
+     * @return CreditorHandleEntity|null
      */
     public function findCreditorByName($name)
     {
-
-        return $this->soapApiService
+        $result = $this->soapApiService
             ->getConnection()
             ->Creditor_FindByName(['name' => $name]);
+
+        return null !== $result ? new CreditorHandleEntity($result->Creditor_FindByEmailResult) : null;
     }
 
     /**
@@ -40,22 +41,32 @@ class Creditor
      */
     public function findCreditorByNumber($number)
     {
-
-        return $this->soapApiService
+        $result = $this->soapApiService
             ->getConnection()
             ->Creditor_FindByNumber(['number' => $number]);
+
+        return null !== $result ? new CreditorHandleEntity($result->Creditor_FindByNumberResult) : null;
     }
 
     /**
      * Return handles for all creditors
-     * @return CreditorHandleEntity
+     * @return CreditorHandleEntity[]
      */
     public function findAllCreditors()
     {
-
-        return $this->soapApiService
+        $results = [];
+        $data = $this->soapApiService
             ->getConnection()
             ->Creditor_GetAll();
+
+        if (null !== $data) {
+            // It's a collection of objects
+            foreach ($data->Creditor_GetAllResult->CreditorHandle as $d) {
+                $results[] = new CreditorHandleEntity($d);
+            }
+        }
+
+        return $results;
     }
 
     /**
@@ -84,15 +95,17 @@ class Creditor
 
         $method = 'Creditor_Get' . $property;
 
-        return $this->soapApiService
+        $data = $this->soapApiService
             ->getConnection()
             ->$method(['creditorHandle' => $creditorHandleEntity]);
+
+        return null !== $data ? new CreditorHandleEntity($data->{'Creditor_Get' . $property . 'Result'}) : null;
     }
 
     /**
      * Creates a new creditor from a data object
      * @param CreditorEntity $creditorEntity
-     * @return CreditorHandleEntity
+     * @return CreditorHandleEntity|null
      */
     public function createCreditor(CreditorEntity $creditorEntity)
     {
@@ -127,15 +140,17 @@ class Creditor
             CreditorEntity::CREDITOR_DEFAULT_INVOICE_TEXT => $creditorEntity->getDefaultInvoiceText(),
         ];
 
-        return $this->soapApiService
+        $result = $this->soapApiService
             ->getConnection()
             ->Creditor_CreateFromData(['data' => $data]);
+
+        return null !== $result ? $result->Creditor_CreateFromDataResult : null;
     }
 
     /**
      * Updates a creditor from a data object
      * @param CreditorEntity $creditorEntity
-     * @return CreditorHandleEntity
+     * @return CreditorHandleEntity|null
      */
     public function updateCreditor(CreditorEntity $creditorEntity)
     {
@@ -170,15 +185,17 @@ class Creditor
             CreditorEntity::CREDITOR_DEFAULT_INVOICE_TEXT => $creditorEntity->getDefaultInvoiceText(),
         ];
 
-        return $this->soapApiService
+        $result = $this->soapApiService
             ->getConnection()
             ->Creditor_UpdateFromData(['data' => $data]);
+
+        return null !== $result ? $result->Creditor_CreateFromDataResult : null;
     }
 
     /**
      * Deletes a creditor
      * @param CreditorHandleEntity $creditorHandleEntity
-     * @return CreditorHandleEntity
+     * @return null
      */
     public function deleteCreditor(CreditorHandleEntity $creditorHandleEntity)
     {
@@ -192,27 +209,28 @@ class Creditor
      * Creates a new creditor contact
      * @param CreditorHandleEntity $creditorHandleEntity
      * @param $name
-     * @return CreditorHandleEntity
+     * @return CreditorHandleEntity|null
      */
     public function createCreditorContact(CreditorHandleEntity $creditorHandleEntity, $name)
     {
-
-        return $this->soapApiService
+        $result = $this->soapApiService
             ->getConnection()
             ->CreditorContact_Create(['creditorHandle' => $creditorHandleEntity, 'name' => $name]);
+
+        return null !== $result ? $result->CreditorContact_CreateResult : null;
     }
 
     /**
      * Get actual data from the creditor handle
      * @param CreditorHandleEntity $creditorHandleEntity
-     * @return mixed
+     * @return mixed|null
      */
     public function getData(CreditorHandleEntity $creditorHandleEntity)
     {
-
-        return $this->soapApiService
+        $result = $this->soapApiService
             ->getConnection()
-            ->Creditor_GetData(['entityHandle' => $creditorHandleEntity])
-            ->Creditor_GetDataResult;
+            ->Creditor_GetData(['entityHandle' => $creditorHandleEntity]);
+
+        return null !== $result ? $result->Creditor_GetDataResult : null;
     }
 }

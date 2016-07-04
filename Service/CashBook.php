@@ -23,46 +23,57 @@ class CashBook
     /**
      * Returns a handle for the cash book with the given name
      * @param $name
-     * @return CashBookHandleEntity
+     * @return CashBookHandleEntity|null
      */
     public function findCashBookByName($name)
     {
-
-        return $this->soapApiService
+        $result = $this->soapApiService
             ->getConnection()
             ->CashBook_FindByName(['name' => $name]);
+
+        return null !== $result ? new CashBookHandleEntity($result->CashBook_FindByNameResult) : null;
     }
 
     /**
      * Returns a handle for the cash book with the given number
      * @param $number
-     * @return CashBookHandleEntity
+     * @return CashBookHandleEntity|null
      */
     public function findCashBookByNumber($number)
     {
-
-        return $this->soapApiService
+        $result = $this->soapApiService
             ->getConnection()
             ->CashBook_FindByNumber(['number' => $number]);
+
+        return null !== $result ? new CashBookHandleEntity($result->CashBook_FindByNumberResult) : null;
     }
 
     /**
      * Return handles for all cash books
-     * @return CashBookHandleEntity
+     * @return CashBookHandleEntity[]
      */
     public function findAllCashBooks()
     {
-
-        return $this->soapApiService
+        $results = [];
+        $data = $this->soapApiService
             ->getConnection()
             ->CashBook_GetAll();
+
+        if (null !== $data) {
+            // It's a collection of objects
+            foreach ($data->CashBook_GetAllResult->CashBookHandle as $d) {
+                $results[] = new CashBookHandleEntity($d);
+            }
+        }
+
+        return $results;
     }
 
     /**
      * Gets the "property" of a cash_boook
      * @param CashBookHandleEntity $cashBookHandleEntity
      * @param $property
-     * @return CashBookHandleEntity
+     * @return CashBookHandleEntity|null
      * @throws InvalidArgumentException
      */
     public function getCashBookProperty(CashBookHandleEntity $cashBookHandleEntity, $property)
@@ -79,15 +90,17 @@ class CashBook
 
         $method = 'CashBook_Get' . $property;
 
-        return $this->soapApiService
+        $data = $this->soapApiService
             ->getConnection()
             ->$method(['cashBookHandle' => $cashBookHandleEntity]);
+
+        return null !== $data ? new CashBookHandleEntity($data->{'CashBook_Get' . $property . 'Result'}) : null;
     }
 
     /**
      * Updates a cash book from a data object
      * @param CashBookEntity $cashBookEntity
-     * @return CashBookHandleEntity
+     * @return CashBookHandleEntity|null
      */
     public function updateCashBook(CashBookEntity $cashBookEntity)
     {
@@ -100,22 +113,24 @@ class CashBook
             CashBookEntity::CASH_BOOK_NAME => $cashBookEntity->getName(),
         ];
 
-        return $this->soapApiService
+        $result = $this->soapApiService
             ->getConnection()
             ->CashBook_UpdateFromData(['data' => $data]);
+
+        return null !== $result ? $result->CashBook_UpdateFromDataResult : null;
     }
 
     /**
      * Get actual data from the cash_book handle
      * @param CashBookHandleEntity $cashBookHandleEntity
-     * @return mixed
+     * @return mixed|null
      */
     public function getData(CashBookHandleEntity $cashBookHandleEntity)
     {
-
-        return $this->soapApiService
+        $result = $this->soapApiService
             ->getConnection()
-            ->CashBook_GetData(['entityHandle' => $cashBookHandleEntity])
-            ->CashBook_GetDataResult;
+            ->CashBook_GetData(['entityHandle' => $cashBookHandleEntity]);
+
+        return null !== $result ? $result->CashBook_GetDataResult : null;
     }
 }

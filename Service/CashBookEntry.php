@@ -24,14 +24,15 @@ class CashBookEntry
     /**
      * Get actual data from the cash_book_entry handle
      * @param CashBookEntryHandleEntity $cashBookEntryHandleEntity
-     * @return mixed
+     * @return mixed|null
      */
     public function getData(CashBookEntryHandleEntity $cashBookEntryHandleEntity)
     {
 
-        return $this->soapApiService
+        $result = $this->soapApiService
             ->getConnection()
-            ->CashBookEntry_GetData(['entityHandle' => $cashBookEntryHandleEntity])
-            ->CashBookEntry_GetDataResult;
+            ->CashBookEntry_GetData(['entityHandle' => $cashBookEntryHandleEntity]);
+
+        return null !== $result ? $result->CashBookEntry_GetDataResult : null;
     }
 }
