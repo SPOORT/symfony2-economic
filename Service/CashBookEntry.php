@@ -6,7 +6,6 @@ use Spoort\Bundle\Symfony2EconomicBundle\Service\SoapApi as SoapApiService;
 use Spoort\Bundle\Symfony2EconomicBundle\Entity\CashBookEntry as CashBookEntryEntity;
 use Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\CashBookEntryHandle as CashBookEntryHandleEntity;
 
-
 class CashBookEntry
 {
     /** @var SoapApiService $soapApiService */
