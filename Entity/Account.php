@@ -11,47 +11,47 @@ class Account extends EconomicSoapEntity
     const DEBIT = 'Debit';
     const CREDIT = 'Credit';
 
-    /** @var $handle AccountHandle */
-    private $handle;
+    /** @var $Handle AccountHandle */
+    private $Handle;
 
-    /** @var $number integer */
-    private $number;
+    /** @var $Number integer */
+    private $Number;
 
-    /** @var $name string */
-    private $name;
+    /** @var $Name string */
+    private $Name;
 
-    /** @var $type string */
-    private $type;
+    /** @var $Type string */
+    private $Type;
 
-    /** @var $debitCredit string */
-    private $debitCredit;
+    /** @var $DebitCredit string */
+    private $DebitCredit;
 
-    /** @var $isAccessible boolean */
-    private $isAccessible;
+    /** @var $IsAccessible boolean */
+    private $IsAccessible;
 
-    /** @var $blockDirectEntries boolean */
-    private $blockDirectEntries;
+    /** @var $BlockDirectEntries boolean */
+    private $BlockDirectEntries;
 
-    /** @var $vatAccountAccountHandle AccountHandle */
-    private $vatAccountAccountHandle;
+    /** @var $VatAccountAccountHandle AccountHandle */
+    private $VatAccountAccountHandle;
 
-    /** @var $contraAccountHandle AccountHandle */
-    private $contraAccountHandle;
+    /** @var $ContraAccountHandle AccountHandle */
+    private $ContraAccountHandle;
 
-    /** @var $openingAccountHandle AccountHandle */
-    private $openingAccountHandle;
+    /** @var $OpeningAccountHandle AccountHandle */
+    private $OpeningAccountHandle;
 
-    /** @var $totalFromHandle AccountHandle */
-    private $totalFromHandle;
+    /** @var $TotalFromHandle AccountHandle */
+    private $TotalFromHandle;
 
-    /** @var $balance float */
-    private $balance;
+    /** @var $Balance float */
+    private $Balance;
 
-    /** @var $departmentHandle DepartmentHandle */
-    private $departmentHandle;
+    /** @var $DepartmentHandle DepartmentHandle */
+    private $DepartmentHandle;
 
-    /** @var $distributionKeyHandle DistributionKeyHandle */
-    private $distributionKeyHandle;
+    /** @var $DistributionKeyHandle DistributionKeyHandle */
+    private $DistributionKeyHandle;
 
     /**
      * Account constructor.
@@ -75,16 +75,16 @@ class Account extends EconomicSoapEntity
      */
     public function getBalance()
     {
-        return $this->balance;
+        return $this->Balance;
     }
 
     /**
-     * @param float $balance
+     * @param float $Balance
      * @return Account
      */
-    public function setBalance($balance)
+    public function setBalance($Balance)
     {
-        $this->balance = $balance;
+        $this->Balance = $Balance;
 
         return $this;
     }
@@ -94,16 +94,16 @@ class Account extends EconomicSoapEntity
      */
     public function getBlockDirectEntries()
     {
-        return $this->blockDirectEntries;
+        return $this->BlockDirectEntries;
     }
 
     /**
-     * @param boolean $blockDirectEntries
+     * @param boolean $BlockDirectEntries
      * @return Account
      */
-    public function setBlockDirectEntries($blockDirectEntries)
+    public function setBlockDirectEntries($BlockDirectEntries)
     {
-        $this->blockDirectEntries = $blockDirectEntries;
+        $this->BlockDirectEntries = $BlockDirectEntries;
 
         return $this;
     }
@@ -113,16 +113,16 @@ class Account extends EconomicSoapEntity
      */
     public function getContraAccountHandle()
     {
-        return $this->contraAccountHandle;
+        return $this->ContraAccountHandle;
     }
 
     /**
-     * @param AccountHandle $contraAccountHandle
+     * @param AccountHandle $ContraAccountHandle
      * @return Account
      */
-    public function setContraAccountHandle($contraAccountHandle)
+    public function setContraAccountHandle($ContraAccountHandle)
     {
-        $this->contraAccountHandle = $contraAccountHandle;
+        $this->ContraAccountHandle = $ContraAccountHandle;
 
         return $this;
     }
@@ -132,16 +132,16 @@ class Account extends EconomicSoapEntity
      */
     public function getDebitCredit()
     {
-        return $this->debitCredit;
+        return $this->DebitCredit;
     }
 
     /**
-     * @param string $debitCredit
+     * @param string $DebitCredit
      * @return Account
      */
-    public function setDebitCredit($debitCredit)
+    public function setDebitCredit($DebitCredit)
     {
-        $this->debitCredit = $debitCredit;
+        $this->DebitCredit = $DebitCredit;
 
         return $this;
     }
@@ -151,16 +151,16 @@ class Account extends EconomicSoapEntity
      */
     public function getDepartmentHandle()
     {
-        return $this->departmentHandle;
+        return $this->DepartmentHandle;
     }
 
     /**
-     * @param DepartmentHandle $departmentHandle
+     * @param DepartmentHandle $DepartmentHandle
      * @return Account
      */
-    public function setDepartmentHandle($departmentHandle)
+    public function setDepartmentHandle($DepartmentHandle)
     {
-        $this->departmentHandle = $departmentHandle;
+        $this->DepartmentHandle = $DepartmentHandle;
 
         return $this;
     }
@@ -170,16 +170,16 @@ class Account extends EconomicSoapEntity
      */
     public function getDistributionKeyHandle()
     {
-        return $this->distributionKeyHandle;
+        return $this->DistributionKeyHandle;
     }
 
     /**
-     * @param DistributionKeyHandle $distributionKeyHandle
+     * @param DistributionKeyHandle $DistributionKeyHandle
      * @return Account
      */
-    public function setDistributionKeyHandle($distributionKeyHandle)
+    public function setDistributionKeyHandle($DistributionKeyHandle)
     {
-        $this->distributionKeyHandle = $distributionKeyHandle;
+        $this->DistributionKeyHandle = $DistributionKeyHandle;
 
         return $this;
     }
@@ -189,16 +189,16 @@ class Account extends EconomicSoapEntity
      */
     public function getHandle()
     {
-        return $this->handle;
+        return $this->Handle;
     }
 
     /**
-     * @param AccountHandle $handle
+     * @param AccountHandle $Handle
      * @return Account
      */
-    public function setHandle($handle)
+    public function setHandle($Handle)
     {
-        $this->handle = $handle;
+        $this->Handle = $Handle;
 
         return $this;
     }
@@ -208,16 +208,16 @@ class Account extends EconomicSoapEntity
      */
     public function getIsAccessible()
     {
-        return $this->isAccessible;
+        return $this->IsAccessible;
     }
 
     /**
-     * @param boolean $isAccessible
+     * @param boolean $IsAccessible
      * @return Account
      */
-    public function setIsAccessible($isAccessible)
+    public function setIsAccessible($IsAccessible)
     {
-        $this->isAccessible = $isAccessible;
+        $this->IsAccessible = $IsAccessible;
 
         return $this;
     }
@@ -227,16 +227,16 @@ class Account extends EconomicSoapEntity
      */
     public function getName()
     {
-        return $this->name;
+        return $this->Name;
     }
 
     /**
-     * @param string $name
+     * @param string $Name
      * @return Account
      */
-    public function setName($name)
+    public function setName($Name)
     {
-        $this->name = $name;
+        $this->Name = $Name;
 
         return $this;
     }
@@ -246,16 +246,16 @@ class Account extends EconomicSoapEntity
      */
     public function getNumber()
     {
-        return $this->number;
+        return $this->Number;
     }
 
     /**
-     * @param int $number
+     * @param int $Number
      * @return Account
      */
-    public function setNumber($number)
+    public function setNumber($Number)
     {
-        $this->number = $number;
+        $this->Number = $Number;
 
         return $this;
     }
@@ -265,16 +265,16 @@ class Account extends EconomicSoapEntity
      */
     public function getOpeningAccountHandle()
     {
-        return $this->openingAccountHandle;
+        return $this->OpeningAccountHandle;
     }
 
     /**
-     * @param AccountHandle $openingAccountHandle
+     * @param AccountHandle $OpeningAccountHandle
      * @return Account
      */
-    public function setOpeningAccountHandle($openingAccountHandle)
+    public function setOpeningAccountHandle($OpeningAccountHandle)
     {
-        $this->openingAccountHandle = $openingAccountHandle;
+        $this->OpeningAccountHandle = $OpeningAccountHandle;
 
         return $this;
     }
@@ -284,16 +284,16 @@ class Account extends EconomicSoapEntity
      */
     public function getTotalFromHandle()
     {
-        return $this->totalFromHandle;
+        return $this->TotalFromHandle;
     }
 
     /**
-     * @param AccountHandle $totalFromHandle
+     * @param AccountHandle $TotalFromHandle
      * @return Account
      */
-    public function setTotalFromHandle($totalFromHandle)
+    public function setTotalFromHandle($TotalFromHandle)
     {
-        $this->totalFromHandle = $totalFromHandle;
+        $this->TotalFromHandle = $TotalFromHandle;
 
         return $this;
     }
@@ -303,17 +303,17 @@ class Account extends EconomicSoapEntity
      */
     public function getType()
     {
-        return $this->type;
+        return $this->Type;
     }
 
     /**
-     * @param string $type
+     * @param string $Type
      * @see Enum\AccountType
      * @return Account
      */
-    public function setType($type)
+    public function setType($Type)
     {
-        $this->type = $type;
+        $this->Type = $Type;
 
         return $this;
     }
@@ -323,16 +323,16 @@ class Account extends EconomicSoapEntity
      */
     public function getVatAccountAccountHandle()
     {
-        return $this->vatAccountAccountHandle;
+        return $this->VatAccountAccountHandle;
     }
 
     /**
-     * @param AccountHandle $vatAccountAccountHandle
+     * @param AccountHandle $VatAccountAccountHandle
      * @return Account
      */
-    public function setVatAccountAccountHandle($vatAccountAccountHandle)
+    public function setVatAccountAccountHandle($VatAccountAccountHandle)
     {
-        $this->vatAccountAccountHandle = $vatAccountAccountHandle;
+        $this->VatAccountAccountHandle = $VatAccountAccountHandle;
 
         return $this;
     }
