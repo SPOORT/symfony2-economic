@@ -24,119 +24,111 @@ class Debtor
     /**
      * Returns handles for debtors with a given Corporate Identification Number
      * @param $number
-     * @return mixed
+     * @return CreditorHandleEntity
      */
     public function findDebtorByCiNumber($number)
     {
 
         return $this->soapApiService
                     ->getConnection()
-                    ->Debtor_FindByCINumber(['number' => $number])
-                    ->Debtor_FindByCINumberResult;
+                    ->Debtor_FindByCINumber(['number' => $number]);
     }
 
     /**
      * Returns handles for debtors with a given EAN
      * @param $ean
-     * @return mixed
+     * @return CreditorHandleEntity
      */
     public function findDebtorByEan($ean)
     {
 
         return $this->soapApiService
                     ->getConnection()
-                    ->Debtor_FindByEan(['ean' => $ean])
-                    ->Debtor_FindByEanResult;
+                    ->Debtor_FindByEan(['ean' => $ean]);
     }
 
     /**
      * Returns handle for debtors with a given email
      * @param $email
-     * @return mixed
+     * @return CreditorHandleEntity
      */
     public function findDebtorByEmail($email)
     {
 
         return $this->soapApiService
                     ->getConnection()
-                    ->Debtor_FindByEmail(['email' => $email])
-                    ->Debtor_FindByEmailResult;
+                    ->Debtor_FindByEmail(['email' => $email]);
     }
 
     /**
      * Returns handles for debtors with a given name
      * @param $name
-     * @return mixed
+     * @return CreditorHandleEntity
      */
     public function findDebtorByName($name)
     {
 
         return $this->soapApiService
             ->getConnection()
-            ->Debtor_FindByName(['name' => $name])
-            ->Debtor_FindByNameResult;
+            ->Debtor_FindByName(['name' => $name]);
     }
 
     /**
      * Returns handle for debtor with a given number
      * @param $number
-     * @return mixed
+     * @return CreditorHandleEntity
      */
     public function findDebtorByNumber($number)
     {
 
         return $this->soapApiService
             ->getConnection()
-            ->Debtor_FindByNumber(['number' => $number])
-            ->Debtor_FindByNumberResult;
+            ->Debtor_FindByNumber(['number' => $number]);
     }
 
     /**
      * Returns handles for debtors with a given partial name
      * @param $partialName
-     * @return mixed
+     * @return CreditorHandleEntity
      */
     public function findDebtorByPartialName($partialName)
     {
 
         return $this->soapApiService
             ->getConnection()
-            ->Debtor_FindByPartialName(['partialName' => $partialName])
-            ->Debtor_FindByPartialNameResult;
+            ->Debtor_FindByPartialName(['partialName' => $partialName]);
     }
 
     /**
      * Returns handle for debtors with a given telephone and fax number
      * @param $telephoneAndFaxNumber
-     * @return mixed
+     * @return CreditorHandleEntity
      */
     public function findDebtorByTelephoneAndFaxNumber($telephoneAndFaxNumber)
     {
 
         return $this->soapApiService
             ->getConnection()
-            ->Debtor_FindByTelephoneAndFaxNumber(['telephoneAndFaxNumber' => $telephoneAndFaxNumber])
-            ->Debtor_FindByTelephoneAndFaxNumberResult;
+            ->Debtor_FindByTelephoneAndFaxNumber(['telephoneAndFaxNumber' => $telephoneAndFaxNumber]);
     }
 
     /**
      * Return handles for all debtors
-     * @return mixed
+     * @return CreditorHandleEntity
      */
     public function findAllDebtors()
     {
 
         return $this->soapApiService
             ->getConnection()
-            ->Debtor_GetAll()
-            ->Debtor_GetAllResult;
+            ->Debtor_GetAll();
     }
 
     /**
      * Gets the "property" of a debtor
      * @param DebtorHandleEntity $debtorHandleEntity
      * @param $property
-     * @return mixed
+     * @return CreditorHandleEntity
      * @throws InvalidArgumentException
      */
     public function getDebtorProperty(DebtorHandleEntity $debtorHandleEntity, $property)
@@ -157,26 +149,23 @@ class Debtor
         }
 
         $method = 'Debtor_Get' . $property;
-        $result = 'Debtor_Get' . $property . 'Result';
 
         return $this->soapApiService
             ->getConnection()
-            ->$method(['debtorHandle' => $debtorHandleEntity])
-            ->$result;
+            ->$method(['debtorHandle' => $debtorHandleEntity]);
     }
 
     /**
      * Returns a debtor data object for a given debtor
      * @param EntityHandleEntity $entityHandleEntity
-     * @return mixed
+     * @return CreditorHandleEntity
      */
     public function getDebtorData(EntityHandleEntity $entityHandleEntity)
     {
 
         return $this->soapApiService
             ->getConnection()
-            ->Debtor_GetData(['entityHandle' => $entityHandleEntity])
-            ->Debtor_GetDataResult;
+            ->Debtor_GetData(['entityHandle' => $entityHandleEntity]);
     }
 
     /**
@@ -184,7 +173,7 @@ class Debtor
      * IMPORTANT: Only VAT_ZONE and IS_ACCESSIBLE are mandatory fields!
      *            All the others are optional (based on SOAP documentation)
      * @param DebtorEntity $debtorEntity
-     * @return mixed
+     * @return CreditorHandleEntity
      */
     public function createDebtor(DebtorEntity $debtorEntity)
     {
@@ -227,14 +216,13 @@ class Debtor
 
         return $this->soapApiService
             ->getConnection()
-            ->Debtor_CreateFromData(['data' => $data])
-            ->Debtor_CreateFromDataResult;
+            ->Debtor_CreateFromData(['data' => $data]);
     }
 
     /**
      * Update debtor
      * @param DebtorEntity $debtorEntity
-     * @return mixed
+     * @return CreditorHandleEntity
      */
     public function updateDebtor(DebtorEntity $debtorEntity)
     {
@@ -277,36 +265,47 @@ class Debtor
 
         return $this->soapApiService
             ->getConnection()
-            ->Debtor_UpdateFromData(['data' => $data])
-            ->Debtor_UpdateFromDataResult;
+            ->Debtor_UpdateFromData(['data' => $data]);
     }
 
     /**
      * Delete debtor
      * @param DebtorHandleEntity $debtorHandleEntity
-     * @return mixed
+     * @return CreditorHandleEntity
      */
     public function deleteDebtor(DebtorHandleEntity $debtorHandleEntity)
     {
 
         return $this->soapApiService
             ->getConnection()
-            ->Debtor_Delete(['debtorHandle' => $debtorHandleEntity])
-            ->Debtor_DeleteResult;
+            ->Debtor_Delete(['debtorHandle' => $debtorHandleEntity]);
     }
 
     /**
      * Creates a new debtor contact
      * @param DebtorHandleEntity $debtorHandleEntity
      * @param $name
-     * @return mixed
+     * @return CreditorHandleEntity
      */
     public function createDebtorContact(DebtorHandleEntity $debtorHandleEntity, $name)
     {
 
         return $this->soapApiService
             ->getConnection()
-            ->DebtorContact_Create(['debtorHandle' => $debtorHandleEntity, 'name' => $name])
-            ->DebtorContact_CreateResult;
+            ->DebtorContact_Create(['debtorHandle' => $debtorHandleEntity, 'name' => $name]);
+    }
+
+    /**
+     * Get actual data from the debtor handle
+     * @param DebtorHandleEntity $debtorHandleEntity
+     * @return mixed
+     */
+    public function getData(DebtorHandleEntity $debtorHandleEntity)
+    {
+
+        return $this->soapApiService
+            ->getConnection()
+            ->Debtor_GetData(['entityHandle' => $debtorHandleEntity])
+            ->Debtor_GetDataResult;
     }
 }
