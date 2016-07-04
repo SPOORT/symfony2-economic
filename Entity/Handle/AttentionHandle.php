@@ -7,7 +7,7 @@ use Spoort\Bundle\Symfony2EconomicBundle\Entity\EconomicSoapEntity;
 class AttentionHandle extends EconomicSoapEntity
 {
     /** @var $id integer */
-    private $id;
+    private $Id;
 
     /**
      * @return int

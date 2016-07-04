@@ -39,76 +39,76 @@ class Creditor extends EconomicSoapEntity
     const CREDITOR_DEFAULT_INVOICE_TEXT = 'DefaultInvoiceText';
 
     /** @var $handle CreditorHandle */
-    private $handle;
+    private $Handle;
 
     /** @var $number string */
-    private $number;
+    private $Number;
 
     /** @var $creditorGroupHandle CreditorGroupHandle */
-    private $creditorGroupHandle;
+    private $CreditorGroupHandle;
 
     /** @var $name string */
-    private $name;
+    private $Name;
 
     /**
      * @see Enum\VatZone
      * @var $vatZone string
      */
-    private $vatZone;
+    private $VatZone;
 
     /** @var $currencyHandle CurrencyHandle */
-    private $currencyHandle;
+    private $CurrencyHandle;
 
     /** @var $termOfPaymentHandle TermOfPaymentHandle */
-    private $termOfPaymentHandle;
+    private $TermOfPaymentHandle;
 
     /** @var $isAccessible boolean */
-    private $isAccessible;
+    private $IsAccessible;
 
     /** @var $ciNumber string */
-    private $ciNumber;
+    private $CiNumber;
 
     /** @var $email string */
-    private $email;
+    private $Email;
 
     /** @var $address string */
-    private $address;
+    private $Address;
 
     /** @var $postalCode string */
-    private $postalCode;
+    private $PostalCode;
 
     /** @var $city string */
-    private $city;
+    private $City;
 
     /** @var $country string */
-    private $country;
+    private $Country;
 
     /** @var $bankAccount string */
-    private $bankAccount;
+    private $BankAccount;
 
     /** @var $attentionHandle AttentionHandle */
-    private $attentionHandle;
+    private $AttentionHandle;
 
     /** @var $yourReferenceHandle YourReferenceHandle */
-    private $yourReferenceHandle;
+    private $YourReferenceHandle;
 
     /** @var $ourReferenceHandle OurReferenceHandle */
-    private $ourReferenceHandle;
+    private $OurReferenceHandle;
 
     /** @var $defaultPaymentTypeHandle PaymentTypeHandle */
-    private $defaultPaymentTypeHandle;
+    private $DefaultPaymentTypeHandle;
 
     /** @var $county string */
-    private $county;
+    private $County;
 
     /** @var $autoContraAccountHandle AccountHandle */
-    private $autoContraAccountHandle;
+    private $AutoContraAccountHandle;
 
     /** @var $defaultInvoiceText string */
-    private $defaultInvoiceText;
+    private $DefaultInvoiceText;
 
     /** @var integer $defaultPaymentCreditorId */
-    private $defaultPaymentCreditorId;
+    private $DefaultPaymentCreditorId;
 
     /**
      * Creditor constructor.

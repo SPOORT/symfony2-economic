@@ -46,94 +46,94 @@ class Debtor extends EconomicSoapEntity
     const DEBTOR_DEFAULT_DELIVERY_LOCATION_HANDLE = 'DefaultDeliveryLocationHandle';
 
     /** @var $handle DebtorHandle */
-    private $handle;
+    private $Handle;
 
     /** @var $number string */
-    private $number;
+    private $Number;
 
     /** @var $debtorGroupHandle DebtorGroupHandle */
-    private $debtorGroupHandle;
+    private $DebtorGroupHandle;
 
     /** @var $name string */
-    private $name;
+    private $Name;
 
     /**
      * @see Enum\VatZone
      * @var $vatZone string
      */
-    private $vatZone;
+    private $VatZone;
 
     /** @var $extendedVatZone string */
-    private $extendedVatZone;
+    private $ExtendedVatZone;
 
     /** @var $currencyHandle CurrencyHandle */
-    private $currencyHandle;
+    private $CurrencyHandle;
 
     /** @var $priceGroupHandle PriceGroupHandle */
-    private $priceGroupHandle;
+    private $PriceGroupHandle;
 
     /** @var $isAccessible boolean */
-    private $isAccessible;
+    private $IsAccessible;
 
     /** @var $ean string */
-    private $ean;
+    private $Ean;
 
     /** @var $publicEntryNumber string */
-    private $publicEntryNumber;
+    private $PublicEntryNumber;
 
     /** @var $email string */
-    private $email;
+    private $Email;
 
     /** @var $telephoneAndFaxNumber string */
-    private $telephoneAndFaxNumber;
+    private $TelephoneAndFaxNumber;
 
     /** @var $website string */
-    private $website;
+    private $Website;
 
     /** @var $address string */
-    private $address;
+    private $Address;
 
     /** @var $postalCode string */
-    private $postalCode;
+    private $PostalCode;
 
     /** @var $city string */
-    private $city;
+    private $City;
 
     /** @var $country string */
-    private $country;
+    private $Country;
 
     /** @var $creditMaximum float */
-    private $creditMaximum;
+    private $CreditMaximum;
 
     /** @var $vatNumber string */
-    private $vatNumber;
+    private $VatNumber;
 
     /** @var $county string */
-    private $county;
+    private $County;
 
     /** @var $ciNumber string */
-    private $ciNumber;
+    private $CiNumber;
 
     /** @var $termOfPaymentHandle TermOfPaymentHandle */
-    private $termOfPaymentHandle;
+    private $TermOfPaymentHandle;
 
     /** @var $layoutHandle LayoutHandle */
-    private $layoutHandle;
+    private $LayoutHandle;
 
     /** @var $attentionHandle AttentionHandle */
-    private $attentionHandle;
+    private $AttentionHandle;
 
     /** @var $yourReferenceHandle YourReferenceHandle */
-    private $yourReferenceHandle;
+    private $YourReferenceHandle;
 
     /** @var $ourReferenceHandle OurReferenceHandle */
-    private $ourReferenceHandle;
+    private $OurReferenceHandle;
 
     /** @var $balance float */
-    private $balance;
+    private $Balance;
 
     /** @var $defaultDeliveryLocationHandle LocationHandle */
-    private $defaultDeliveryLocationHandle;
+    private $DefaultDeliveryLocationHandle;
 
     /**
      * Creditor constructor.

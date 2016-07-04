@@ -12,13 +12,13 @@ class CashBook extends EconomicSoapEntity
     const CASH_BOOK_ENTRIES = 'Entries';
 
     /** @var $handle CashBookHandle */
-    private $handle;
+    private $Handle;
 
     /** @var string $number */
-    private $number;
+    private $Number;
 
     /** @var string $name */
-    private $name;
+    private $Name;
 
     /**
      * CashBook constructor.

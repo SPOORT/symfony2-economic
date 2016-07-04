@@ -7,7 +7,7 @@ use Spoort\Bundle\Symfony2EconomicBundle\Entity\EconomicSoapEntity;
 class EntityHandle extends EconomicSoapEntity
 {
     /** @var $number integer */
-    private $number;
+    private $Number;
 
     /**
      * @return int

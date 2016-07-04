@@ -8,7 +8,7 @@ class CostTypeHandle extends EconomicSoapEntity
 {
 
     /** @var $number string */
-    private $number;
+    private $Number;
 
     /**
      * @return string

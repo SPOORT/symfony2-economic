@@ -8,7 +8,7 @@ class PriceGroupHandle extends EconomicSoapEntity
 {
 
     /** @var $number integer */
-    private $number;
+    private $Number;
 
     /**
      * @return int

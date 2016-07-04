@@ -8,7 +8,7 @@ class CurrencyHandle extends EconomicSoapEntity
 {
 
     /** @var $code string */
-    private $code;
+    private $Code;
 
     /**
      * @return string

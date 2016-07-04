@@ -20,97 +20,97 @@ use Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\ProjectHandle;
 class CashBookEntry extends EconomicSoapEntity
 {
     /** @var $handle CashBookEntryHandle */
-    private $handle;
+    private $Handle;
 
     /** @var $id1 integer */
-    private $id1;
+    private $Id1;
 
     /** @var $id2 integer */
-    private $id2;
+    private $Id2;
 
     /** @var $type CashBookEntryType */
-    private $type;
+    private $Type;
 
     /** @var $cashBookHandle CashBookHandle */
-    private $cashBookHandle;
+    private $CashBookHandle;
 
     /** @var $debtorHandle DebtorHandle */
-    private $debtorHandle;
+    private $DebtorHandle;
 
     /** @var $creditorHandle CreditorHandle */
-    private $creditorHandle;
+    private $CreditorHandle;
 
     /** @var $accountHandle AccountHandle */
-    private $accountHandle;
+    private $AccountHandle;
 
     /** @var $contraAccountHandle AccountHandle */
-    private $contraAccountHandle;
+    private $ContraAccountHandle;
 
     /** @var $dateTime \DateTime */
-    private $dateTime;
+    private $DateTime;
 
     /** @var $voucherNumber integer */
-    private $voucherNumber;
+    private $VoucherNumber;
 
     /** @var $text string */
-    private $text;
+    private $Text;
 
     /** @var $amountDefaultCurrency float */
-    private $amountDefaultCurrency;
+    private $AmountDefaultCurrency;
 
     /** @var $currencyHandle CurrencyHandle */
-    private $currencyHandle;
+    private $CurrencyHandle;
 
     /** @var $amount float */
-    private $amount;
+    private $Amount;
 
     /** @var $vatAccountHandle AccountHandle */
-    private $vatAccountHandle;
+    private $VatAccountHandle;
 
     /** @var $contraVatAccountHandle AccountHandle */
-    private $contraVatAccountHandle;
+    private $ContraVatAccountHandle;
 
     /** @var $debtorInvoiceNumber integer */
-    private $debtorInvoiceNumber;
+    private $DebtorInvoiceNumber;
 
     /** @var $creditorInvoiceNumber integer */
-    private $creditorInvoiceNumber;
+    private $CreditorInvoiceNumber;
 
     /** @var $dueDate \DateTime */
-    private $dueDate;
+    private $DueDate;
 
     /** @var $departmentHandle DepartmentHandle */
-    private $departmentHandle;
+    private $DepartmentHandle;
 
     /** @var $distributionKeyHandle DistributionKeyHandle */
-    private $distributionKeyHandle;
+    private $DistributionKeyHandle;
 
     /** @var $projectHandle ProjectHandle */
-    private $projectHandle;
+    private $ProjectHandle;
 
     /** @var $costTypeHandle CostTypeHandle */
-    private $costTypeHandle;
+    private $CostTypeHandle;
 
     /** @var $bankPaymentTypeHandle PaymentTypeHandle */
-    private $bankPaymentTypeHandle;
+    private $BankPaymentTypeHandle;
 
     /** @var $bankPaymentCreditorId string */
-    private $bankPaymentCreditorId;
+    private $BankPaymentCreditorId;
 
     /** @var $bankPaymentCreditorInvoiceId string */
-    private $bankPaymentCreditorInvoiceId;
+    private $BankPaymentCreditorInvoiceId;
 
     /** @var $capitaliseHandle CapitaliseHandle */
-    private $capitaliseHandle;
+    private $CapitaliseHandle;
 
     /** @var $startDate \DateTime */
-    private $startDate;
+    private $StartDate;
 
     /** @var $endDate \DateTime */
-    private $endDate;
+    private $EndDate;
 
     /** @var $employeeHandle EmployeeHandle */
-    private $employeeHandle;
+    private $EmployeeHandle;
 
     /**
      * CashBookEntry constructor.

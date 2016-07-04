@@ -7,7 +7,7 @@ use Spoort\Bundle\Symfony2EconomicBundle\Entity\EconomicSoapEntity;
 class LayoutHandle extends EconomicSoapEntity
 {
     /** @var $number integer */
-    private $id;
+    private $Id;
 
     /**
      * @return int

@@ -8,7 +8,7 @@ class PaymentTypeHandle extends EconomicSoapEntity
 {
 
     /** @var $number string */
-    private $number;
+    private $Number;
 
     /**
      * @return string
