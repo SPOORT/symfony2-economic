@@ -2,8 +2,9 @@
 
 namespace Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle;
 
+use Spoort\Bundle\Symfony2EconomicBundle\Entity\EconomicSoapEntity;
 
-class DistributionKeyHandle
+class DistributionKeyHandle extends EconomicSoapEntity
 {
 
     /** @var $number integer */

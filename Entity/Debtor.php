@@ -13,7 +13,7 @@ use Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\PriceGroupHandle;
 use Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\TermOfPaymentHandle;
 use Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\YourReferenceHandle;
 
-class Debtor
+class Debtor extends EconomicSoapEntity
 {
     const DEBTOR_HANDLE = 'Handle';
     const DEBTOR_NUMBER = 'Number';
@@ -137,8 +137,9 @@ class Debtor
 
     /**
      * Creditor constructor.
+     * @param null $soapObject
      */
-    public function __construct()
+    public function __construct($soapObject = null)
     {
         $this->setHandle(new DebtorHandle());
         $this->setDebtorGroupHandle(new DebtorGroupHandle());
@@ -150,6 +151,8 @@ class Debtor
         $this->setLayoutHandle(new LayoutHandle());
         $this->setPriceGroupHandle(new PriceGroupHandle());
         $this->setDefaultDeliveryLocationHandle(new LocationHandle());
+
+        parent::__construct($soapObject);
     }
 
     /**

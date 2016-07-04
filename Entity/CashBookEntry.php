@@ -17,7 +17,7 @@ use Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\EmployeeHandle;
 use Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\PaymentTypeHandle;
 use Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\ProjectHandle;
 
-class CashBookEntry
+class CashBookEntry extends EconomicSoapEntity
 {
     /** @var $handle CashBookEntryHandle */
     private $handle;
@@ -40,8 +40,8 @@ class CashBookEntry
     /** @var $creditorHandle CreditorHandle */
     private $creditorHandle;
 
-    /** @var $accountHandle AccountHandle  */
-    private $account;
+    /** @var $accountHandle AccountHandle */
+    private $accountHandle;
 
     /** @var $contraAccountHandle AccountHandle */
     private $contraAccountHandle;
@@ -113,20 +113,49 @@ class CashBookEntry
     private $employeeHandle;
 
     /**
-     * @return AccountHandle
+     * CashBookEntry constructor.
+     * @param null $soapObject
      */
-    public function getAccount()
+    public function __construct($soapObject)
     {
-        return $this->account;
+        $this->setHandle(new CashBookEntryHandle());
+        $this->setCurrencyHandle(new CurrencyHandle());
+        $this->setCapitaliseHandle(new CapitaliseHandle());
+        $this->setCreditorHandle(new CreditorHandle());
+        $this->setAccountHandle(new AccountHandle());
+        $this->setDebtorHandle(new DebtorHandle());
+        $this->setDepartmentHandle(new DepartmentHandle());
+        $this->setEmployeeHandle(new EmployeeHandle());
+        $this->setProjectHandle(new ProjectHandle());
+        $this->setCashBookHandle(new CashBookHandle());
+        $this->setContraAccountHandle(new AccountHandle());
+        $this->setCostTypeHandle(new CostTypeHandle());
+        $this->setDistributionKeyHandle(new DistributionKeyHandle());
+        $this->setVatAccountHandle(new AccountHandle());
+        $this->setDebtorHandle(new DebtorHandle());
+        $this->setDepartmentHandle(new DepartmentHandle());
+        $this->setBankPaymentTypeHandle(new PaymentTypeHandle());
+        $this->setProjectHandle(new ProjectHandle());
+        $this->setContraVatAccountHandle(new AccountHandle());
+
+        parent::__construct($soapObject);
     }
 
     /**
-     * @param AccountHandle $account
+     * @return AccountHandle
+     */
+    public function getAccountHandle()
+    {
+        return $this->accountHandle;
+    }
+
+    /**
+     * @param AccountHandle $accountHandle
      * @return CashBookEntry
      */
-    public function setAccount($account)
+    public function setAccountHandle($accountHandle)
     {
-        $this->account = $account;
+        $this->accountHandle = $accountHandle;
 
         return $this;
     }

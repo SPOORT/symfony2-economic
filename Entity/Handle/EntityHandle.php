@@ -2,8 +2,9 @@
 
 namespace Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle;
 
+use Spoort\Bundle\Symfony2EconomicBundle\Entity\EconomicSoapEntity;
 
-class EntityHandle
+class EntityHandle extends EconomicSoapEntity
 {
     /** @var $number integer */
     private $number;

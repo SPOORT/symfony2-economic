@@ -2,8 +2,9 @@
 
 namespace Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle;
 
+use Spoort\Bundle\Symfony2EconomicBundle\Entity\EconomicSoapEntity;
 
-class CashBookEntryHandle
+class CashBookEntryHandle extends EconomicSoapEntity
 {
     /** @var $id1 integer */
     private $id1;

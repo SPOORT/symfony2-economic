@@ -3,7 +3,9 @@
 namespace Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle;
 
 
-class AccountHandle
+use Spoort\Bundle\Symfony2EconomicBundle\Entity\EconomicSoapEntity;
+
+class AccountHandle extends EconomicSoapEntity
 {
 
     /** @var $number integer */

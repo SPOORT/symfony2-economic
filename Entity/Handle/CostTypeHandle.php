@@ -2,8 +2,9 @@
 
 namespace Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle;
 
+use Spoort\Bundle\Symfony2EconomicBundle\Entity\EconomicSoapEntity;
 
-class CostTypeHandle
+class CostTypeHandle extends EconomicSoapEntity
 {
 
     /** @var $number string */

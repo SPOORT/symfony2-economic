@@ -2,13 +2,14 @@
 
 namespace Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle;
 
+use Spoort\Bundle\Symfony2EconomicBundle\Entity\EconomicSoapEntity;
 
-class CapitaliseHandle
+class CapitaliseHandle extends EconomicSoapEntity
 {
 
     /** @var $number integer */
     private $number;
-
+    
     /**
      * @return int
      */

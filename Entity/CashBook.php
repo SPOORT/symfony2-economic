@@ -4,7 +4,7 @@ namespace Spoort\Bundle\Symfony2EconomicBundle\Entity;
 
 use Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\CashBookHandle;
 
-class CashBook
+class CashBook extends EconomicSoapEntity
 {
     const CASH_BOOK_HANDLE = 'Handle';
     const CASH_BOOK_NUMBER = 'Number';
@@ -19,6 +19,17 @@ class CashBook
 
     /** @var string $name */
     private $name;
+
+    /**
+     * CashBook constructor.
+     * @param null $soapObject
+     */
+    public function __construct($soapObject)
+    {
+        $this->setHandle(new CashBookHandle());
+        
+        parent::__construct($soapObject);
+    }
 
     /**
      * @return CashBookHandle
