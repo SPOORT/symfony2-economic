@@ -110,40 +110,9 @@ class Creditor
      */
     public function createCreditor(CreditorEntity $creditorEntity)
     {
-        $data = [
-            // Optional inputs
-            CreditorEntity::CREDITOR_HANDLE => $creditorEntity->getHandle(),
-            CreditorEntity::CREDITOR_NUMBER => $creditorEntity->getNumber(),
-            CreditorEntity::CREDITOR_CREDITOR_GROUP_HANDLE => $creditorEntity->getCreditorGroupHandle(),
-            CreditorEntity::CREDITOR_NAME => $creditorEntity->getName(),
-            // Mandatory input
-            CreditorEntity::CREDITOR_VAT_ZONE => $creditorEntity->getVatZone(),
-            // Optional inputs
-            CreditorEntity::CREDITOR_CURRENCY_HANDLE => $creditorEntity->getCurrencyHandle(),
-            CreditorEntity::CREDITOR_TERM_OF_PAYMENT_HANDLE => $creditorEntity->getTermOfPaymentHandle(),
-            // Mandatory input
-            CreditorEntity::CREDITOR_IS_ACCESSIBLE => $creditorEntity->isIsAccessible(),
-            // Optional inputs
-            CreditorEntity::CREDITOR_CI_NUMBER => $creditorEntity->getCiNumber(),
-            CreditorEntity::CREDITOR_EMAIL => $creditorEntity->getEmail(),
-            CreditorEntity::CREDITOR_ADDRESS => $creditorEntity->getAddress(),
-            CreditorEntity::CREDITOR_POSTAL_CODE => $creditorEntity->getPostalCode(),
-            CreditorEntity::CREDITOR_CITY => $creditorEntity->getCity(),
-            CreditorEntity::CREDITOR_COUNTRY => $creditorEntity->getCountry(),
-            CreditorEntity::CREDITOR_BANK_ACCOUNT => $creditorEntity->getBankAccount(),
-            CreditorEntity::CREDITOR_ATTENTION_HANDLE => $creditorEntity->getAttentionHandle(),
-            CreditorEntity::CREDITOR_YOUR_REFERENCE_HANDLE => $creditorEntity->getYourReferenceHandle(),
-            CreditorEntity::CREDITOR_OUR_REFERENCE_HANDLE => $creditorEntity->getOurReferenceHandle(),
-            CreditorEntity::CREDITOR_DEFAULT_PAYMENT_TYPE_HANDLE => $creditorEntity->getDefaultPaymentTypeHandle(),
-            CreditorEntity::CREDITOR_DEFAULT_PAYMENT_CREDITOR_ID_HANDLE => $creditorEntity->getDefaultPaymentCreditorId(),
-            CreditorEntity::CREDITOR_COUNTY => $creditorEntity->getCounty(),
-            CreditorEntity::CREDITOR_AUTO_CONTRA_ACCOUNT_HANDLE => $creditorEntity->getAutoContraAccountHandle(),
-            CreditorEntity::CREDITOR_DEFAULT_INVOICE_TEXT => $creditorEntity->getDefaultInvoiceText(),
-        ];
-
         $result = $this->soapApiService
             ->getConnection()
-            ->Creditor_CreateFromData(['data' => $data]);
+            ->Creditor_CreateFromData(['data' => $creditorEntity->asTerseAssociateArray()]);
 
         return null !== $result ? $result->Creditor_CreateFromDataResult : null;
     }
@@ -155,40 +124,9 @@ class Creditor
      */
     public function updateCreditor(CreditorEntity $creditorEntity)
     {
-        $data = [
-            // Optional inputs
-            CreditorEntity::CREDITOR_HANDLE => $creditorEntity->getHandle(),
-            CreditorEntity::CREDITOR_NUMBER => $creditorEntity->getNumber(),
-            CreditorEntity::CREDITOR_CREDITOR_GROUP_HANDLE => $creditorEntity->getCreditorGroupHandle(),
-            CreditorEntity::CREDITOR_NAME => $creditorEntity->getName(),
-            // Mandatory input
-            CreditorEntity::CREDITOR_VAT_ZONE => $creditorEntity->getVatZone(),
-            // Optional inputs
-            CreditorEntity::CREDITOR_CURRENCY_HANDLE => $creditorEntity->getCurrencyHandle(),
-            CreditorEntity::CREDITOR_TERM_OF_PAYMENT_HANDLE => $creditorEntity->getTermOfPaymentHandle(),
-            // Mandatory input
-            CreditorEntity::CREDITOR_IS_ACCESSIBLE => $creditorEntity->isIsAccessible(),
-            // Optional inputs
-            CreditorEntity::CREDITOR_CI_NUMBER => $creditorEntity->getCiNumber(),
-            CreditorEntity::CREDITOR_EMAIL => $creditorEntity->getEmail(),
-            CreditorEntity::CREDITOR_ADDRESS => $creditorEntity->getAddress(),
-            CreditorEntity::CREDITOR_POSTAL_CODE => $creditorEntity->getPostalCode(),
-            CreditorEntity::CREDITOR_CITY => $creditorEntity->getCity(),
-            CreditorEntity::CREDITOR_COUNTRY => $creditorEntity->getCountry(),
-            CreditorEntity::CREDITOR_BANK_ACCOUNT => $creditorEntity->getBankAccount(),
-            CreditorEntity::CREDITOR_ATTENTION_HANDLE => $creditorEntity->getAttentionHandle(),
-            CreditorEntity::CREDITOR_YOUR_REFERENCE_HANDLE => $creditorEntity->getYourReferenceHandle(),
-            CreditorEntity::CREDITOR_OUR_REFERENCE_HANDLE => $creditorEntity->getOurReferenceHandle(),
-            CreditorEntity::CREDITOR_DEFAULT_PAYMENT_TYPE_HANDLE => $creditorEntity->getDefaultPaymentTypeHandle(),
-            CreditorEntity::CREDITOR_DEFAULT_PAYMENT_CREDITOR_ID_HANDLE => $creditorEntity->getDefaultPaymentCreditorId(),
-            CreditorEntity::CREDITOR_COUNTY => $creditorEntity->getCounty(),
-            CreditorEntity::CREDITOR_AUTO_CONTRA_ACCOUNT_HANDLE => $creditorEntity->getAutoContraAccountHandle(),
-            CreditorEntity::CREDITOR_DEFAULT_INVOICE_TEXT => $creditorEntity->getDefaultInvoiceText(),
-        ];
-
         $result = $this->soapApiService
             ->getConnection()
-            ->Creditor_UpdateFromData(['data' => $data]);
+            ->Creditor_UpdateFromData(['data' => $creditorEntity->asTerseAssociateArray()]);
 
         return null !== $result ? $result->Creditor_CreateFromDataResult : null;
     }
