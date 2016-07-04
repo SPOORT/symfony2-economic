@@ -15,7 +15,7 @@ class CurrencyHandle extends EconomicSoapEntity
      */
     public function getCode()
     {
-        return $this->code;
+        return $this->Code;
     }
 
     /**
@@ -24,7 +24,7 @@ class CurrencyHandle extends EconomicSoapEntity
      */
     public function setCode($code)
     {
-        $this->code = $code;
+        $this->Code = $code;
 
         return $this;
     }

@@ -17,7 +17,7 @@ class CashBookEntryHandle extends EconomicSoapEntity
      */
     public function getId1()
     {
-        return $this->id1;
+        return $this->Id1;
     }
 
     /**
@@ -26,7 +26,7 @@ class CashBookEntryHandle extends EconomicSoapEntity
      */
     public function setId1($id1)
     {
-        $this->id1 = $id1;
+        $this->Id1 = $id1;
 
         return $this;
     }
@@ -36,7 +36,7 @@ class CashBookEntryHandle extends EconomicSoapEntity
      */
     public function getId2()
     {
-        return $this->id2;
+        return $this->Id2;
     }
 
     /**
@@ -45,7 +45,7 @@ class CashBookEntryHandle extends EconomicSoapEntity
      */
     public function setId2($id2)
     {
-        $this->id2 = $id2;
+        $this->Id2 = $id2;
 
         return $this;
     }

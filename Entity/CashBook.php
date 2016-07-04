@@ -36,7 +36,7 @@ class CashBook extends EconomicSoapEntity
      */
     public function getHandle()
     {
-        return $this->handle;
+        return $this->Handle;
     }
 
     /**
@@ -45,7 +45,7 @@ class CashBook extends EconomicSoapEntity
      */
     public function setHandle($handle)
     {
-        $this->handle = $handle;
+        $this->Handle = $handle;
 
         return $this;
     }
@@ -55,7 +55,7 @@ class CashBook extends EconomicSoapEntity
      */
     public function getNumber()
     {
-        return $this->number;
+        return $this->Number;
     }
 
     /**
@@ -64,7 +64,7 @@ class CashBook extends EconomicSoapEntity
      */
     public function setNumber($number)
     {
-        $this->number = $number;
+        $this->Number = $number;
 
         return $this;
     }
@@ -74,7 +74,7 @@ class CashBook extends EconomicSoapEntity
      */
     public function getName()
     {
-        return $this->name;
+        return $this->Name;
     }
 
     /**
@@ -83,7 +83,7 @@ class CashBook extends EconomicSoapEntity
      */
     public function setName($name)
     {
-        $this->name = $name;
+        $this->Name = $name;
 
         return $this;
     }

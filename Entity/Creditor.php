@@ -134,7 +134,7 @@ class Creditor extends EconomicSoapEntity
      */
     public function getHandle()
     {
-        return $this->handle;
+        return $this->Handle;
     }
 
     /**
@@ -143,7 +143,7 @@ class Creditor extends EconomicSoapEntity
      */
     public function setHandle($handle)
     {
-        $this->handle = $handle;
+        $this->Handle = $handle;
 
         return $this;
     }
@@ -153,7 +153,7 @@ class Creditor extends EconomicSoapEntity
      */
     public function getNumber()
     {
-        return $this->number;
+        return $this->Number;
     }
 
     /**
@@ -162,7 +162,7 @@ class Creditor extends EconomicSoapEntity
      */
     public function setNumber($number)
     {
-        $this->number = $number;
+        $this->Number = $number;
 
         return $this;
     }
@@ -172,7 +172,7 @@ class Creditor extends EconomicSoapEntity
      */
     public function getCreditorGroupHandle()
     {
-        return $this->creditorGroupHandle;
+        return $this->CreditorGroupHandle;
     }
 
     /**
@@ -181,7 +181,7 @@ class Creditor extends EconomicSoapEntity
      */
     public function setCreditorGroupHandle($creditorGroupHandle)
     {
-        $this->creditorGroupHandle = $creditorGroupHandle;
+        $this->CreditorGroupHandle = $creditorGroupHandle;
 
         return $this;
     }
@@ -191,7 +191,7 @@ class Creditor extends EconomicSoapEntity
      */
     public function getName()
     {
-        return $this->name;
+        return $this->Name;
     }
 
     /**
@@ -200,7 +200,7 @@ class Creditor extends EconomicSoapEntity
      */
     public function setName($name)
     {
-        $this->name = $name;
+        $this->Name = $name;
 
         return $this;
     }
@@ -211,7 +211,7 @@ class Creditor extends EconomicSoapEntity
      */
     public function getVatZone()
     {
-        return $this->vatZone;
+        return $this->VatZone;
     }
 
     /**
@@ -221,7 +221,7 @@ class Creditor extends EconomicSoapEntity
      */
     public function setVatZone($vatZone)
     {
-        $this->vatZone = $vatZone;
+        $this->VatZone = $vatZone;
 
         return $this;
     }
@@ -231,7 +231,7 @@ class Creditor extends EconomicSoapEntity
      */
     public function getCurrencyHandle()
     {
-        return $this->currencyHandle;
+        return $this->CurrencyHandle;
     }
 
     /**
@@ -240,7 +240,7 @@ class Creditor extends EconomicSoapEntity
      */
     public function setCurrencyHandle($currencyHandle)
     {
-        $this->currencyHandle = $currencyHandle;
+        $this->CurrencyHandle = $currencyHandle;
 
         return $this;
     }
@@ -250,7 +250,7 @@ class Creditor extends EconomicSoapEntity
      */
     public function getTermOfPaymentHandle()
     {
-        return $this->termOfPaymentHandle;
+        return $this->TermOfPaymentHandle;
     }
 
     /**
@@ -259,7 +259,7 @@ class Creditor extends EconomicSoapEntity
      */
     public function setTermOfPaymentHandle($termOfPaymentHandle)
     {
-        $this->termOfPaymentHandle = $termOfPaymentHandle;
+        $this->TermOfPaymentHandle = $termOfPaymentHandle;
 
         return $this;
     }
@@ -269,7 +269,7 @@ class Creditor extends EconomicSoapEntity
      */
     public function getIsAccessible()
     {
-        return $this->isAccessible;
+        return $this->IsAccessible;
     }
 
     /**
@@ -278,7 +278,7 @@ class Creditor extends EconomicSoapEntity
      */
     public function setIsAccessible($isAccessible)
     {
-        $this->isAccessible = $isAccessible;
+        $this->IsAccessible = $isAccessible;
 
         return $this;
     }
@@ -288,7 +288,7 @@ class Creditor extends EconomicSoapEntity
      */
     public function getCiNumber()
     {
-        return $this->ciNumber;
+        return $this->CiNumber;
     }
 
     /**
@@ -297,7 +297,7 @@ class Creditor extends EconomicSoapEntity
      */
     public function setCiNumber($ciNumber)
     {
-        $this->ciNumber = $ciNumber;
+        $this->CiNumber = $ciNumber;
 
         return $this;
     }
@@ -307,7 +307,7 @@ class Creditor extends EconomicSoapEntity
      */
     public function getEmail()
     {
-        return $this->email;
+        return $this->Email;
     }
 
     /**
@@ -316,7 +316,7 @@ class Creditor extends EconomicSoapEntity
      */
     public function setEmail($email)
     {
-        $this->email = $email;
+        $this->Email = $email;
 
         return $this;
     }
@@ -326,7 +326,7 @@ class Creditor extends EconomicSoapEntity
      */
     public function getAddress()
     {
-        return $this->address;
+        return $this->Address;
     }
 
     /**
@@ -335,7 +335,7 @@ class Creditor extends EconomicSoapEntity
      */
     public function setAddress($address)
     {
-        $this->address = $address;
+        $this->Address = $address;
 
         return $this;
     }
@@ -345,7 +345,7 @@ class Creditor extends EconomicSoapEntity
      */
     public function getPostalCode()
     {
-        return $this->postalCode;
+        return $this->PostalCode;
     }
 
     /**
@@ -354,7 +354,7 @@ class Creditor extends EconomicSoapEntity
      */
     public function setPostalCode($postalCode)
     {
-        $this->postalCode = $postalCode;
+        $this->PostalCode = $postalCode;
 
         return $this;
     }
@@ -364,7 +364,7 @@ class Creditor extends EconomicSoapEntity
      */
     public function getCity()
     {
-        return $this->city;
+        return $this->City;
     }
 
     /**
@@ -373,7 +373,7 @@ class Creditor extends EconomicSoapEntity
      */
     public function setCity($city)
     {
-        $this->city = $city;
+        $this->City = $city;
 
         return $this;
     }
@@ -383,7 +383,7 @@ class Creditor extends EconomicSoapEntity
      */
     public function getCountry()
     {
-        return $this->country;
+        return $this->Country;
     }
 
     /**
@@ -392,7 +392,7 @@ class Creditor extends EconomicSoapEntity
      */
     public function setCountry($country)
     {
-        $this->country = $country;
+        $this->Country = $country;
 
         return $this;
     }
@@ -402,7 +402,7 @@ class Creditor extends EconomicSoapEntity
      */
     public function getBankAccount()
     {
-        return $this->bankAccount;
+        return $this->BankAccount;
     }
 
     /**
@@ -411,7 +411,7 @@ class Creditor extends EconomicSoapEntity
      */
     public function setBankAccount($bankAccount)
     {
-        $this->bankAccount = $bankAccount;
+        $this->BankAccount = $bankAccount;
 
         return $this;
     }
@@ -421,7 +421,7 @@ class Creditor extends EconomicSoapEntity
      */
     public function getAttentionHandle()
     {
-        return $this->attentionHandle;
+        return $this->AttentionHandle;
     }
 
     /**
@@ -430,7 +430,7 @@ class Creditor extends EconomicSoapEntity
      */
     public function setAttentionHandle($attentionHandle)
     {
-        $this->attentionHandle = $attentionHandle;
+        $this->AttentionHandle = $attentionHandle;
 
         return $this;
     }
@@ -440,7 +440,7 @@ class Creditor extends EconomicSoapEntity
      */
     public function getYourReferenceHandle()
     {
-        return $this->yourReferenceHandle;
+        return $this->YourReferenceHandle;
     }
 
     /**
@@ -449,7 +449,7 @@ class Creditor extends EconomicSoapEntity
      */
     public function setYourReferenceHandle($yourReferenceHandle)
     {
-        $this->yourReferenceHandle = $yourReferenceHandle;
+        $this->YourReferenceHandle = $yourReferenceHandle;
 
         return $this;
     }
@@ -459,7 +459,7 @@ class Creditor extends EconomicSoapEntity
      */
     public function getOurReferenceHandle()
     {
-        return $this->ourReferenceHandle;
+        return $this->OurReferenceHandle;
     }
 
     /**
@@ -468,7 +468,7 @@ class Creditor extends EconomicSoapEntity
      */
     public function setOurReferenceHandle($ourReferenceHandle)
     {
-        $this->ourReferenceHandle = $ourReferenceHandle;
+        $this->OurReferenceHandle = $ourReferenceHandle;
 
         return $this;
     }
@@ -478,7 +478,7 @@ class Creditor extends EconomicSoapEntity
      */
     public function getDefaultPaymentTypeHandle()
     {
-        return $this->defaultPaymentTypeHandle;
+        return $this->DefaultPaymentTypeHandle;
     }
 
     /**
@@ -487,7 +487,7 @@ class Creditor extends EconomicSoapEntity
      */
     public function setDefaultPaymentTypeHandle($defaultPaymentTypeHandle)
     {
-        $this->defaultPaymentTypeHandle = $defaultPaymentTypeHandle;
+        $this->DefaultPaymentTypeHandle = $defaultPaymentTypeHandle;
 
         return $this;
     }
@@ -497,7 +497,7 @@ class Creditor extends EconomicSoapEntity
      */
     public function getCounty()
     {
-        return $this->county;
+        return $this->County;
     }
 
     /**
@@ -506,7 +506,7 @@ class Creditor extends EconomicSoapEntity
      */
     public function setCounty($county)
     {
-        $this->county = $county;
+        $this->County = $county;
 
         return $this;
     }
@@ -516,7 +516,7 @@ class Creditor extends EconomicSoapEntity
      */
     public function getAutoContraAccountHandle()
     {
-        return $this->autoContraAccountHandle;
+        return $this->AutoContraAccountHandle;
     }
 
     /**
@@ -525,7 +525,7 @@ class Creditor extends EconomicSoapEntity
      */
     public function setAutoContraAccountHandle($autoContraAccountHandle)
     {
-        $this->autoContraAccountHandle = $autoContraAccountHandle;
+        $this->AutoContraAccountHandle = $autoContraAccountHandle;
 
         return $this;
     }
@@ -535,7 +535,7 @@ class Creditor extends EconomicSoapEntity
      */
     public function getDefaultInvoiceText()
     {
-        return $this->defaultInvoiceText;
+        return $this->DefaultInvoiceText;
     }
 
     /**
@@ -544,7 +544,7 @@ class Creditor extends EconomicSoapEntity
      */
     public function setDefaultInvoiceText($defaultInvoiceText)
     {
-        $this->defaultInvoiceText = $defaultInvoiceText;
+        $this->DefaultInvoiceText = $defaultInvoiceText;
 
         return $this;
     }
@@ -554,7 +554,7 @@ class Creditor extends EconomicSoapEntity
      */
     public function getDefaultPaymentCreditorId()
     {
-        return $this->defaultPaymentCreditorId;
+        return $this->DefaultPaymentCreditorId;
     }
 
     /**
@@ -563,7 +563,7 @@ class Creditor extends EconomicSoapEntity
      */
     public function setDefaultPaymentCreditorId($defaultPaymentCreditorId)
     {
-        $this->defaultPaymentCreditorId = $defaultPaymentCreditorId;
+        $this->DefaultPaymentCreditorId = $defaultPaymentCreditorId;
 
         return $this;
     }

@@ -146,7 +146,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function getAccountHandle()
     {
-        return $this->accountHandle;
+        return $this->AccountHandle;
     }
 
     /**
@@ -155,7 +155,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function setAccountHandle($accountHandle)
     {
-        $this->accountHandle = $accountHandle;
+        $this->AccountHandle = $accountHandle;
 
         return $this;
     }
@@ -165,7 +165,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function getAmount()
     {
-        return $this->amount;
+        return $this->Amount;
     }
 
     /**
@@ -174,7 +174,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function setAmount($amount)
     {
-        $this->amount = $amount;
+        $this->Amount = $amount;
 
         return $this;
     }
@@ -184,7 +184,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function getAmountDefaultCurrency()
     {
-        return $this->amountDefaultCurrency;
+        return $this->AmountDefaultCurrency;
     }
 
     /**
@@ -193,7 +193,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function setAmountDefaultCurrency($amountDefaultCurrency)
     {
-        $this->amountDefaultCurrency = $amountDefaultCurrency;
+        $this->AmountDefaultCurrency = $amountDefaultCurrency;
 
         return $this;
     }
@@ -203,7 +203,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function getBankPaymentCreditorId()
     {
-        return $this->bankPaymentCreditorId;
+        return $this->BankPaymentCreditorId;
     }
 
     /**
@@ -212,7 +212,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function setBankPaymentCreditorId($bankPaymentCreditorId)
     {
-        $this->bankPaymentCreditorId = $bankPaymentCreditorId;
+        $this->BankPaymentCreditorId = $bankPaymentCreditorId;
 
         return $this;
     }
@@ -222,7 +222,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function getBankPaymentCreditorInvoiceId()
     {
-        return $this->bankPaymentCreditorInvoiceId;
+        return $this->BankPaymentCreditorInvoiceId;
     }
 
     /**
@@ -231,7 +231,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function setBankPaymentCreditorInvoiceId($bankPaymentCreditorInvoiceId)
     {
-        $this->bankPaymentCreditorInvoiceId = $bankPaymentCreditorInvoiceId;
+        $this->BankPaymentCreditorInvoiceId = $bankPaymentCreditorInvoiceId;
 
         return $this;
     }
@@ -241,7 +241,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function getBankPaymentTypeHandle()
     {
-        return $this->bankPaymentTypeHandle;
+        return $this->BankPaymentTypeHandle;
     }
 
     /**
@@ -250,7 +250,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function setBankPaymentTypeHandle($bankPaymentTypeHandle)
     {
-        $this->bankPaymentTypeHandle = $bankPaymentTypeHandle;
+        $this->BankPaymentTypeHandle = $bankPaymentTypeHandle;
 
         return $this;
     }
@@ -260,7 +260,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function getCapitaliseHandle()
     {
-        return $this->capitaliseHandle;
+        return $this->CapitaliseHandle;
     }
 
     /**
@@ -269,7 +269,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function setCapitaliseHandle($capitaliseHandle)
     {
-        $this->capitaliseHandle = $capitaliseHandle;
+        $this->CapitaliseHandle = $capitaliseHandle;
 
         return $this;
     }
@@ -279,7 +279,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function getCashBookHandle()
     {
-        return $this->cashBookHandle;
+        return $this->CashBookHandle;
     }
 
     /**
@@ -288,7 +288,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function setCashBookHandle($cashBookHandle)
     {
-        $this->cashBookHandle = $cashBookHandle;
+        $this->CashBookHandle = $cashBookHandle;
 
         return $this;
     }
@@ -298,7 +298,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function getContraAccountHandle()
     {
-        return $this->contraAccountHandle;
+        return $this->ContraAccountHandle;
     }
 
     /**
@@ -307,7 +307,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function setContraAccountHandle($contraAccountHandle)
     {
-        $this->contraAccountHandle = $contraAccountHandle;
+        $this->ContraAccountHandle = $contraAccountHandle;
 
         return $this;
     }
@@ -317,7 +317,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function getContraVatAccountHandle()
     {
-        return $this->contraVatAccountHandle;
+        return $this->ContraVatAccountHandle;
     }
 
     /**
@@ -326,7 +326,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function setContraVatAccountHandle($contraVatAccountHandle)
     {
-        $this->contraVatAccountHandle = $contraVatAccountHandle;
+        $this->ContraVatAccountHandle = $contraVatAccountHandle;
 
         return $this;
     }
@@ -336,7 +336,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function getCostTypeHandle()
     {
-        return $this->costTypeHandle;
+        return $this->CostTypeHandle;
     }
 
     /**
@@ -345,7 +345,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function setCostTypeHandle($costTypeHandle)
     {
-        $this->costTypeHandle = $costTypeHandle;
+        $this->CostTypeHandle = $costTypeHandle;
 
         return $this;
     }
@@ -355,7 +355,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function getCreditorHandle()
     {
-        return $this->creditorHandle;
+        return $this->CreditorHandle;
     }
 
     /**
@@ -364,7 +364,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function setCreditorHandle($creditorHandle)
     {
-        $this->creditorHandle = $creditorHandle;
+        $this->CreditorHandle = $creditorHandle;
 
         return $this;
     }
@@ -374,7 +374,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function getCreditorInvoiceNumber()
     {
-        return $this->creditorInvoiceNumber;
+        return $this->CreditorInvoiceNumber;
     }
 
     /**
@@ -383,7 +383,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function setCreditorInvoiceNumber($creditorInvoiceNumber)
     {
-        $this->creditorInvoiceNumber = $creditorInvoiceNumber;
+        $this->CreditorInvoiceNumber = $creditorInvoiceNumber;
 
         return $this;
     }
@@ -393,7 +393,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function getCurrencyHandle()
     {
-        return $this->currencyHandle;
+        return $this->CurrencyHandle;
     }
 
     /**
@@ -402,7 +402,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function setCurrencyHandle($currencyHandle)
     {
-        $this->currencyHandle = $currencyHandle;
+        $this->CurrencyHandle = $currencyHandle;
 
         return $this;
     }
@@ -412,7 +412,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function getDateTime()
     {
-        return $this->dateTime;
+        return $this->DateTime;
     }
 
     /**
@@ -421,7 +421,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function setDateTime($dateTime)
     {
-        $this->dateTime = $dateTime;
+        $this->DateTime = $dateTime;
 
         return $this;
     }
@@ -431,7 +431,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function getDebtorHandle()
     {
-        return $this->debtorHandle;
+        return $this->DebtorHandle;
     }
 
     /**
@@ -440,7 +440,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function setDebtorHandle($debtorHandle)
     {
-        $this->debtorHandle = $debtorHandle;
+        $this->DebtorHandle = $debtorHandle;
 
         return $this;
     }
@@ -450,7 +450,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function getDebtorInvoiceNumber()
     {
-        return $this->debtorInvoiceNumber;
+        return $this->DebtorInvoiceNumber;
     }
 
     /**
@@ -459,7 +459,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function setDebtorInvoiceNumber($debtorInvoiceNumber)
     {
-        $this->debtorInvoiceNumber = $debtorInvoiceNumber;
+        $this->DebtorInvoiceNumber = $debtorInvoiceNumber;
 
         return $this;
     }
@@ -469,7 +469,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function getDepartmentHandle()
     {
-        return $this->departmentHandle;
+        return $this->DepartmentHandle;
     }
 
     /**
@@ -478,7 +478,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function setDepartmentHandle($departmentHandle)
     {
-        $this->departmentHandle = $departmentHandle;
+        $this->DepartmentHandle = $departmentHandle;
 
         return $this;
     }
@@ -488,7 +488,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function getDistributionKeyHandle()
     {
-        return $this->distributionKeyHandle;
+        return $this->DistributionKeyHandle;
     }
 
     /**
@@ -497,7 +497,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function setDistributionKeyHandle($distributionKeyHandle)
     {
-        $this->distributionKeyHandle = $distributionKeyHandle;
+        $this->DistributionKeyHandle = $distributionKeyHandle;
 
         return $this;
     }
@@ -507,7 +507,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function getDueDate()
     {
-        return $this->dueDate;
+        return $this->DueDate;
     }
 
     /**
@@ -516,7 +516,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function setDueDate($dueDate)
     {
-        $this->dueDate = $dueDate;
+        $this->DueDate = $dueDate;
 
         return $this;
     }
@@ -526,7 +526,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function getEmployeeHandle()
     {
-        return $this->employeeHandle;
+        return $this->EmployeeHandle;
     }
 
     /**
@@ -535,7 +535,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function setEmployeeHandle($employeeHandle)
     {
-        $this->employeeHandle = $employeeHandle;
+        $this->EmployeeHandle = $employeeHandle;
 
         return $this;
     }
@@ -545,7 +545,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function getEndDate()
     {
-        return $this->endDate;
+        return $this->EndDate;
     }
 
     /**
@@ -554,7 +554,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function setEndDate($endDate)
     {
-        $this->endDate = $endDate;
+        $this->EndDate = $endDate;
 
         return $this;
     }
@@ -564,7 +564,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function getHandle()
     {
-        return $this->handle;
+        return $this->Handle;
     }
 
     /**
@@ -573,7 +573,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function setHandle($handle)
     {
-        $this->handle = $handle;
+        $this->Handle = $handle;
 
         return $this;
     }
@@ -583,7 +583,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function getId1()
     {
-        return $this->id1;
+        return $this->Id1;
     }
 
     /**
@@ -592,7 +592,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function setId1($id1)
     {
-        $this->id1 = $id1;
+        $this->Id1 = $id1;
 
         return $this;
     }
@@ -602,7 +602,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function getId2()
     {
-        return $this->id2;
+        return $this->Id2;
     }
 
     /**
@@ -611,7 +611,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function setId2($id2)
     {
-        $this->id2 = $id2;
+        $this->Id2 = $id2;
 
         return $this;
     }
@@ -621,7 +621,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function getProjectHandle()
     {
-        return $this->projectHandle;
+        return $this->ProjectHandle;
     }
 
     /**
@@ -630,7 +630,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function setProjectHandle($projectHandle)
     {
-        $this->projectHandle = $projectHandle;
+        $this->ProjectHandle = $projectHandle;
 
         return $this;
     }
@@ -640,7 +640,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function getStartDate()
     {
-        return $this->startDate;
+        return $this->StartDate;
     }
 
     /**
@@ -649,7 +649,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function setStartDate($startDate)
     {
-        $this->startDate = $startDate;
+        $this->StartDate = $startDate;
 
         return $this;
     }
@@ -659,7 +659,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function getText()
     {
-        return $this->text;
+        return $this->Text;
     }
 
     /**
@@ -668,7 +668,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function setText($text)
     {
-        $this->text = $text;
+        $this->Text = $text;
 
         return $this;
     }
@@ -678,7 +678,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function getType()
     {
-        return $this->type;
+        return $this->Type;
     }
 
     /**
@@ -687,7 +687,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function setType($type)
     {
-        $this->type = $type;
+        $this->Type = $type;
 
         return $this;
     }
@@ -697,7 +697,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function getVatAccountHandle()
     {
-        return $this->vatAccountHandle;
+        return $this->VatAccountHandle;
     }
 
     /**
@@ -706,7 +706,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function setVatAccountHandle($vatAccountHandle)
     {
-        $this->vatAccountHandle = $vatAccountHandle;
+        $this->VatAccountHandle = $vatAccountHandle;
 
         return $this;
     }
@@ -716,7 +716,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function getVoucherNumber()
     {
-        return $this->voucherNumber;
+        return $this->VoucherNumber;
     }
 
     /**
@@ -725,7 +725,7 @@ class CashBookEntry extends EconomicSoapEntity
      */
     public function setVoucherNumber($voucherNumber)
     {
-        $this->voucherNumber = $voucherNumber;
+        $this->VoucherNumber = $voucherNumber;
 
         return $this;
     }

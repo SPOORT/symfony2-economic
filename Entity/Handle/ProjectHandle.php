@@ -15,7 +15,7 @@ class ProjectHandle extends EconomicSoapEntity
      */
     public function getNumber()
     {
-        return $this->number;
+        return $this->Number;
     }
 
     /**
@@ -24,7 +24,7 @@ class ProjectHandle extends EconomicSoapEntity
      */
     public function setNumber($number)
     {
-        $this->number = $number;
+        $this->Number = $number;
 
         return $this;
     }

@@ -14,7 +14,7 @@ class TermOfPaymentHandle extends EconomicSoapEntity
      */
     public function getId()
     {
-        return $this->id;
+        return $this->Id;
     }
 
     /**
@@ -23,7 +23,7 @@ class TermOfPaymentHandle extends EconomicSoapEntity
      */
     public function setId($id)
     {
-        $this->id = $id;
+        $this->Id = $id;
 
         return $this;
     }

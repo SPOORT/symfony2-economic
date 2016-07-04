@@ -23,7 +23,7 @@ abstract class EconomicSoapEntity
     public function __construct($soapObject = null)
     {
         if(null !== $soapObject) {
-            $this->mirrorPropertyValues($soapObject);
+            $this->MirrorPropertyValues($soapObject);
         }
     }
 
