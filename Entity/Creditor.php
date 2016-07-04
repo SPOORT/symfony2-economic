@@ -12,7 +12,7 @@ use Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\PaymentTypeHandle;
 use Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\TermOfPaymentHandle;
 use Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\YourReferenceHandle;
 
-class Creditor
+class Creditor extends EconomicSoapEntity
 {
     const CREDITOR_HANDLE = 'Handle';
     const CREDITOR_NUMBER = 'Number';
@@ -112,8 +112,9 @@ class Creditor
 
     /**
      * Creditor constructor.
+     * @param null $soapObject
      */
-    public function __construct()
+    public function __construct($soapObject = null)
     {
         $this->setHandle(new CreditorHandle());
         $this->setAttentionHandle(new AttentionHandle());
@@ -124,6 +125,8 @@ class Creditor
         $this->setAutoContraAccountHandle(new AccountHandle());
         $this->setDefaultPaymentTypeHandle(new PaymentTypeHandle());
         $this->setTermOfPaymentHandle(new TermOfPaymentHandle());
+
+        parent::__construct($soapObject);
     }
 
     /**
