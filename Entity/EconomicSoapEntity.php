@@ -51,11 +51,47 @@ abstract class EconomicSoapEntity
                 $sourcePropertyValue = $sourceReflection->getProperty($thisPropertyName)->getValue($sourceObject);
 
                 if ($thisPropertyValue instanceof EconomicSoapEntity) {
+                    // If the property is a nested entity, tell that entity to copy values from the input.
+                    // Since nested entities are created in constructors, this means they will have the correct class type.
                     $thisPropertyValue->mirrorPropertyValues($sourcePropertyValue);
                 } else {
+                    // For any other type, just set it directly.
                     $thisPropertySetter->invoke($this, $sourcePropertyValue);
                 }
             }
         }
+    }
+
+    /**
+     * Returns an associative array representation of the entity. Only non-null values will be included.
+     * This is different from array_filter((array)object) in that our method will not return subtrees if they have no non-null values.
+     */
+    public function asTerseAssociateArray()
+    {
+        $result = [];
+
+        $reflection = new ReflectionObject($this);
+        $properties = $reflection->getProperties();
+
+        foreach ($properties as $property) {
+            $propertyName = $property->getName();
+            $propertyGetter = $reflection->getMethod(sprintf('get%s', ucfirst($propertyName)));
+            $propertyValue = $propertyGetter->invoke($this);
+
+            if($propertyValue instanceof EconomicSoapEntity) {
+                // If the property is a nested entity, let it convert itself.
+                $propertyConvertedValue = $propertyValue->asTerseAssociateArray();
+
+                if(!empty($propertyConvertedValue)) {
+                    $result[$propertyName] = $propertyConvertedValue;
+                }
+            } else {
+                if(null !== $propertyValue) {
+                    $result[$propertyName] = $propertyValue;
+                }
+            }
+        }
+
+        return $result;
     }
 }
