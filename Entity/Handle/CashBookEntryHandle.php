@@ -2,30 +2,15 @@
 
 namespace Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle;
 
+use Spoort\Bundle\Symfony2EconomicBundle\Entity\EconomicSoapEntity;
 
-class CashBookEntryHandle
+class CashBookEntryHandle extends EconomicSoapEntity
 {
     /** @var $id1 integer */
     private $id1;
 
     /** @var $id2 integer */
     private $id2;
-
-    /**
-     * CashBookEntryHandle constructor.
-     * Create a new handle from the result of a SOAP API call.
-     * @param $soapObject
-     */
-    public function __construct($soapObject)
-    {
-        if (is_object($soapObject) && isset($soapObject->Id1) && isset($soapObject->Id2)) {
-            $this->setId1($soapObject->Id1);
-            $this->setId2($soapObject->Id2);
-        } else {
-
-            throw new \InvalidArgumentException(sprintf('Cannot construct %s from given source object: Does not contain properties %s and %s.', get_class(), 'Id1', 'Id2'));
-        }
-    }
 
     /**
      * @return int
