@@ -22,6 +22,20 @@ class CashBookEntry
     }
 
     /**
+     * Creates a new cash book entry
+     * @param CashBookEntryEntity $cashBookEntryEntity
+     * @return CashBookEntryEntity|null
+     */
+    public function createCashBookEntry(CashBookEntryEntity $cashBookEntryEntity)
+    {
+        $result = $this->soapApiService
+            ->getConnection()
+            ->CashBookEntry_CreateFromData(['data' => $cashBookEntryEntity->asTerseAssociateArray()]);
+
+        return null !== $result ? $result->CashBookEntry_CreateFromDataResult : null;
+    }
+
+    /**
      * Get actual data from the cash_book_entry handle
      * @param CashBookEntryHandleEntity $cashBookEntryHandleEntity
      * @return mixed|null
