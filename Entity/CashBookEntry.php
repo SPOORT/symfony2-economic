@@ -138,6 +138,7 @@ class CashBookEntry extends EconomicSoapEntity
         $this->setProjectHandle(new ProjectHandle());
         $this->setContraVatAccountHandle(new AccountHandle());
         $this->setDate(date('c'));
+        $this->setDueDate(date('c'));
 
         parent::__construct($soapObject);
     }
