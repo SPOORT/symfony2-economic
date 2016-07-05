@@ -45,94 +45,94 @@ class Debtor extends EconomicSoapEntity
     const DEBTOR_BALANCE = 'Balance';
     const DEBTOR_DEFAULT_DELIVERY_LOCATION_HANDLE = 'DefaultDeliveryLocationHandle';
 
-    /** @var $handle DebtorHandle */
+    /** @var DebtorHandle $Handle */
     private $Handle;
 
-    /** @var $number string */
+    /** @var string $Number */
     private $Number;
 
-    /** @var $debtorGroupHandle DebtorGroupHandle */
+    /** @var DebtorGroupHandle $DebtorGroupHandle */
     private $DebtorGroupHandle;
 
-    /** @var $name string */
+    /** @var string $Name */
     private $Name;
 
     /**
      * @see Enum\VatZone
-     * @var $vatZone string
+     * @var string $VatZone
      */
     private $VatZone;
 
-    /** @var $extendedVatZone string */
+    /** @var string $ExtendedVatZone */
     private $ExtendedVatZone;
 
-    /** @var $currencyHandle CurrencyHandle */
+    /** @var CurrencyHandle $CurrencyHandle */
     private $CurrencyHandle;
 
-    /** @var $priceGroupHandle PriceGroupHandle */
+    /** @var PriceGroupHandle $PriceGroupHandle */
     private $PriceGroupHandle;
 
-    /** @var $isAccessible boolean */
+    /** @var boolean $IsAccessible */
     private $IsAccessible;
 
-    /** @var $ean string */
+    /** @var string $Ean */
     private $Ean;
 
-    /** @var $publicEntryNumber string */
+    /** @var string $PublicEntryNumber */
     private $PublicEntryNumber;
 
-    /** @var $email string */
+    /** @var string $Email */
     private $Email;
 
-    /** @var $telephoneAndFaxNumber string */
+    /** @var string $TelephoneAndFaxNumber */
     private $TelephoneAndFaxNumber;
 
-    /** @var $website string */
+    /** @var string $Website */
     private $Website;
 
-    /** @var $address string */
+    /** @var string $Address */
     private $Address;
 
-    /** @var $postalCode string */
+    /** @var string $PostalCode */
     private $PostalCode;
 
-    /** @var $city string */
+    /** @var string $City */
     private $City;
 
-    /** @var $country string */
+    /** @var string $Country */
     private $Country;
 
-    /** @var $creditMaximum float */
+    /** @var float $CreditMaximum */
     private $CreditMaximum;
 
-    /** @var $vatNumber string */
+    /** @var string $VatNumber */
     private $VatNumber;
 
-    /** @var $county string */
+    /** @var string $County */
     private $County;
 
-    /** @var $ciNumber string */
+    /** @var string $CiNumber */
     private $CiNumber;
 
-    /** @var $termOfPaymentHandle TermOfPaymentHandle */
+    /** @var TermOfPaymentHandle $TermOfPaymentHandle */
     private $TermOfPaymentHandle;
 
-    /** @var $layoutHandle LayoutHandle */
+    /** @var LayoutHandle $LayoutHandle */
     private $LayoutHandle;
 
-    /** @var $attentionHandle AttentionHandle */
+    /** @var AttentionHandle $AttentionHandle */
     private $AttentionHandle;
 
-    /** @var $yourReferenceHandle YourReferenceHandle */
+    /** @var YourReferenceHandle $YourReferenceHandle */
     private $YourReferenceHandle;
 
-    /** @var $ourReferenceHandle OurReferenceHandle */
+    /** @var OurReferenceHandle $OurReferenceHandle */
     private $OurReferenceHandle;
 
-    /** @var $balance float */
+    /** @var float $Balance */
     private $Balance;
 
-    /** @var $defaultDeliveryLocationHandle LocationHandle */
+    /** @var LocationHandle $DefaultDeliveryLocationHandle */
     private $DefaultDeliveryLocationHandle;
 
     /**

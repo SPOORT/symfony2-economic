@@ -11,46 +11,46 @@ class Account extends EconomicSoapEntity
     const DEBIT = 'Debit';
     const CREDIT = 'Credit';
 
-    /** @var $Handle AccountHandle */
+    /** @var AccountHandle $Handle */
     private $Handle;
 
-    /** @var $Number integer */
+    /** @var integer $Number */
     private $Number;
 
-    /** @var $Name string */
+    /** @var string $Name */
     private $Name;
 
-    /** @var $Type string */
+    /** @var string $Type */
     private $Type;
 
-    /** @var $DebitCredit string */
+    /** @var string $DebitCredit */
     private $DebitCredit;
 
-    /** @var $IsAccessible boolean */
+    /** @var boolean $IsAccessible */
     private $IsAccessible;
 
-    /** @var $BlockDirectEntries boolean */
+    /** @var boolean $BlockDirectEntries */
     private $BlockDirectEntries;
 
-    /** @var $VatAccountAccountHandle AccountHandle */
+    /** @var AccountHandle $VatAccountAccountHandle */
     private $VatAccountAccountHandle;
 
-    /** @var $ContraAccountHandle AccountHandle */
+    /** @var AccountHandle $ContraAccountHandle */
     private $ContraAccountHandle;
 
-    /** @var $OpeningAccountHandle AccountHandle */
+    /** @var AccountHandle $OpeningAccountHandle */
     private $OpeningAccountHandle;
 
-    /** @var $TotalFromHandle AccountHandle */
+    /** @var AccountHandle $TotalFromHandle */
     private $TotalFromHandle;
 
-    /** @var $Balance float */
+    /** @var float $Balance */
     private $Balance;
 
-    /** @var $DepartmentHandle DepartmentHandle */
+    /** @var DepartmentHandle $DepartmentHandle */
     private $DepartmentHandle;
 
-    /** @var $DistributionKeyHandle DistributionKeyHandle */
+    /** @var DistributionKeyHandle $DistributionKeyHandle */
     private $DistributionKeyHandle;
 
     /**

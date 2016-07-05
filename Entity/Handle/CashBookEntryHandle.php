@@ -6,10 +6,10 @@ use Spoort\Bundle\Symfony2EconomicBundle\Entity\EconomicSoapEntity;
 
 class CashBookEntryHandle extends EconomicSoapEntity
 {
-    /** @var $id1 integer */
+    /** @var integer $Id1 */
     private $Id1;
 
-    /** @var $id2 integer */
+    /** @var integer $Id2 */
     private $Id2;
 
     /**

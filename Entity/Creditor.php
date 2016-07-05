@@ -38,76 +38,76 @@ class Creditor extends EconomicSoapEntity
     const CREDITOR_AUTO_CONTRA_ACCOUNT_HANDLE = 'AutoContraAccountHandle';
     const CREDITOR_DEFAULT_INVOICE_TEXT = 'DefaultInvoiceText';
 
-    /** @var $handle CreditorHandle */
+    /** @var CreditorHandle $Handle */
     private $Handle;
 
-    /** @var $number string */
+    /** @var string $Number */
     private $Number;
 
-    /** @var $creditorGroupHandle CreditorGroupHandle */
+    /** @var CreditorGroupHandle $CreditorGroupHandle */
     private $CreditorGroupHandle;
 
-    /** @var $name string */
+    /** @var string $Name */
     private $Name;
 
     /**
      * @see Enum\VatZone
-     * @var $vatZone string
+     * @var string $VatZone
      */
     private $VatZone;
 
-    /** @var $currencyHandle CurrencyHandle */
+    /** @var CurrencyHandle $CurrencyHandle */
     private $CurrencyHandle;
 
-    /** @var $termOfPaymentHandle TermOfPaymentHandle */
+    /** @var TermOfPaymentHandle $TermOfPaymentHandle */
     private $TermOfPaymentHandle;
 
-    /** @var $isAccessible boolean */
+    /** @var boolean $IsAccessible */
     private $IsAccessible;
 
-    /** @var $ciNumber string */
+    /** @var string $CiNumber */
     private $CiNumber;
 
-    /** @var $email string */
+    /** @var string $Email */
     private $Email;
 
-    /** @var $address string */
+    /** @var string $Address */
     private $Address;
 
-    /** @var $postalCode string */
+    /** @var string $PostalCode */
     private $PostalCode;
 
-    /** @var $city string */
+    /** @var string $City */
     private $City;
 
-    /** @var $country string */
+    /** @var string $Country */
     private $Country;
 
-    /** @var $bankAccount string */
+    /** @var string $BankAccount */
     private $BankAccount;
 
-    /** @var $attentionHandle AttentionHandle */
+    /** @var AttentionHandle $AttentionHandle */
     private $AttentionHandle;
 
-    /** @var $yourReferenceHandle YourReferenceHandle */
+    /** @var YourReferenceHandle $YourReferenceHandle */
     private $YourReferenceHandle;
 
-    /** @var $ourReferenceHandle OurReferenceHandle */
+    /** @var OurReferenceHandle $OurReferenceHandle */
     private $OurReferenceHandle;
 
-    /** @var $defaultPaymentTypeHandle PaymentTypeHandle */
+    /** @var PaymentTypeHandle $DefaultPaymentTypeHandle */
     private $DefaultPaymentTypeHandle;
 
-    /** @var $county string */
+    /** @var string $County */
     private $County;
 
-    /** @var $autoContraAccountHandle AccountHandle */
+    /** @var AccountHandle $AutoContraAccountHandle */
     private $AutoContraAccountHandle;
 
-    /** @var $defaultInvoiceText string */
+    /** @var string $DefaultInvoiceText */
     private $DefaultInvoiceText;
 
-    /** @var integer $defaultPaymentCreditorId */
+    /** @var integer $DefaultPaymentCreditorId */
     private $DefaultPaymentCreditorId;
 
     /**

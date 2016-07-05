@@ -6,7 +6,7 @@ use Spoort\Bundle\Symfony2EconomicBundle\Entity\EconomicSoapEntity;
 
 class LocationHandle extends EconomicSoapEntity
 {
-    /** @var $number integer */
+    /** @var integer $Id */
     private $Id;
 
     /**

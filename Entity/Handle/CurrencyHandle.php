@@ -7,7 +7,7 @@ use Spoort\Bundle\Symfony2EconomicBundle\Entity\EconomicSoapEntity;
 class CurrencyHandle extends EconomicSoapEntity
 {
 
-    /** @var $code string */
+    /** @var string $Code */
     private $Code;
 
     /**

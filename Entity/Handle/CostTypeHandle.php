@@ -7,7 +7,7 @@ use Spoort\Bundle\Symfony2EconomicBundle\Entity\EconomicSoapEntity;
 class CostTypeHandle extends EconomicSoapEntity
 {
 
-    /** @var $number string */
+    /** @var string $Number */
     private $Number;
 
     /**

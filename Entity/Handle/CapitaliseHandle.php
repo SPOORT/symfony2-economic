@@ -7,7 +7,7 @@ use Spoort\Bundle\Symfony2EconomicBundle\Entity\EconomicSoapEntity;
 class CapitaliseHandle extends EconomicSoapEntity
 {
 
-    /** @var $number integer */
+    /** @var integer $Number */
     private $Number;
     
     /**
