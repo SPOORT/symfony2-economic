@@ -24,7 +24,7 @@ class CashBook extends EconomicSoapEntity
      * CashBook constructor.
      * @param null $soapObject
      */
-    public function __construct($soapObject)
+    public function __construct($soapObject = null)
     {
         $this->setHandle(new CashBookHandle());
         
