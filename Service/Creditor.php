@@ -128,7 +128,7 @@ class Creditor
             ->getConnection()
             ->Creditor_UpdateFromData(['data' => $creditorEntity->asTerseAssociateArray()]);
 
-        return !empty((array) $result) ? $result->Creditor_CreateFromDataResult : null;
+        return !empty((array) $result) ? $result->Creditor_UpdateFromDataResult : null;
     }
 
     /**
