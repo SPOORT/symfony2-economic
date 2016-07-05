@@ -59,7 +59,7 @@ class Account
                        ->getConnection()
                        ->Account_FindByNumber(['number' => $number]);
 
-        return null !== $result ? new AccountHandleEntity($result->Account_FindByNumberResult) : null;
+        return !empty((array) $result) ? new AccountHandleEntity($result->Account_FindByNumberResult) : null;
     }
 
     /**
@@ -95,6 +95,6 @@ class Account
             ->getConnection()
             ->Account_GetData(['entityHandle' => $accountHandleEntity]);
 
-        return null !== $result ? new AccountEntity($result->Account_GetDataResult) : null;
+        return !empty((array) $result) ? new AccountEntity($result->Account_GetDataResult) : null;
     }
 }

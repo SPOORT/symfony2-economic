@@ -32,7 +32,7 @@ class CashBookEntry
             ->getConnection()
             ->CashBookEntry_CreateFromData(['data' => $cashBookEntryEntity->asTerseAssociateArray()]);
 
-        return null !== $result ? $result->CashBookEntry_CreateFromDataResult : null;
+        return !empty((array) $result) ? $result->CashBookEntry_CreateFromDataResult : null;
     }
 
     /**
