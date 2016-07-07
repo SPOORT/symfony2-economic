@@ -31,7 +31,7 @@ class CashBook
             ->getConnection()
             ->CashBook_FindByName(['name' => $name]);
 
-        return null !== $result ? new CashBookHandleEntity($result->CashBook_FindByNameResult) : null;
+        return !empty((array) $result) ? new CashBookHandleEntity($result->CashBook_FindByNameResult) : null;
     }
 
     /**
@@ -45,7 +45,7 @@ class CashBook
             ->getConnection()
             ->CashBook_FindByNumber(['number' => $number]);
 
-        return null !== $result ? new CashBookHandleEntity($result->CashBook_FindByNumberResult) : null;
+        return !empty((array) $result) ? new CashBookHandleEntity($result->CashBook_FindByNumberResult) : null;
     }
 
     /**
@@ -95,7 +95,7 @@ class CashBook
             ->getConnection()
             ->$method(['cashBookHandle' => $cashBookHandleEntity]);
 
-        return null !== $data ? new CashBookHandleEntity($data->{'CashBook_Get' . $property . 'Result'}) : null;
+        return !empty((array) $data) ? new CashBookHandleEntity($data->{'CashBook_Get' . $property . 'Result'}) : null;
     }
 
     /**
@@ -118,7 +118,7 @@ class CashBook
             ->getConnection()
             ->CashBook_UpdateFromData(['data' => $data]);
 
-        return null !== $result ? $result->CashBook_UpdateFromDataResult : null;
+        return !empty((array) $result) ? $result->CashBook_UpdateFromDataResult : null;
     }
 
     /**
@@ -132,6 +132,6 @@ class CashBook
             ->getConnection()
             ->CashBook_GetData(['entityHandle' => $cashBookHandleEntity]);
 
-        return null !== $result ? new CashBookEntity($result->CashBook_GetDataResult) : null;
+        return !empty((array) $result) ? new CashBookEntity($result->CashBook_GetDataResult) : null;
     }
 }

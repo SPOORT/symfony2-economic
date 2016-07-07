@@ -19,104 +19,104 @@ use Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\ProjectHandle;
 
 class CashBookEntry extends EconomicSoapEntity
 {
-    /** @var $handle CashBookEntryHandle */
+    /** @var CashBookEntryHandle $Handle */
     private $Handle;
 
-    /** @var $id1 integer */
+    /** @var integer $Id1 */
     private $Id1;
 
-    /** @var $id2 integer */
+    /** @var integer $Id2 */
     private $Id2;
 
-    /** @var $type CashBookEntryType */
+    /** @var CashBookEntryType $Type */
     private $Type;
 
-    /** @var $cashBookHandle CashBookHandle */
+    /** @var CashBookHandle $CashBookHandle */
     private $CashBookHandle;
 
-    /** @var $debtorHandle DebtorHandle */
+    /** @var DebtorHandle $DebtorHandle */
     private $DebtorHandle;
 
-    /** @var $creditorHandle CreditorHandle */
+    /** @var CreditorHandle $CreditorHandle */
     private $CreditorHandle;
 
-    /** @var $accountHandle AccountHandle */
+    /** @var AccountHandle $AccountHandle */
     private $AccountHandle;
 
-    /** @var $contraAccountHandle AccountHandle */
+    /** @var AccountHandle $ContraAccountHandle */
     private $ContraAccountHandle;
 
-    /** @var $dateTime \DateTime */
-    private $DateTime;
+    /** @var \DateTime $Date */
+    private $Date;
 
-    /** @var $voucherNumber integer */
+    /** @var integer $VoucherNumber */
     private $VoucherNumber;
 
-    /** @var $text string */
+    /** @var string $Text */
     private $Text;
 
-    /** @var $amountDefaultCurrency float */
+    /** @var float $AmountDefaultCurrency */
     private $AmountDefaultCurrency;
 
-    /** @var $currencyHandle CurrencyHandle */
+    /** @var CurrencyHandle $CurrencyHandle */
     private $CurrencyHandle;
 
-    /** @var $amount float */
+    /** @var float $Amount */
     private $Amount;
 
-    /** @var $vatAccountHandle AccountHandle */
+    /** @var AccountHandle $VatAccountHandle */
     private $VatAccountHandle;
 
-    /** @var $contraVatAccountHandle AccountHandle */
+    /** @var AccountHandle $ContraVatAccountHandle */
     private $ContraVatAccountHandle;
 
-    /** @var $debtorInvoiceNumber integer */
+    /** @var integer $DebtorInvoiceNumber */
     private $DebtorInvoiceNumber;
 
-    /** @var $creditorInvoiceNumber integer */
+    /** @var integer $CreditorInvoiceNumber */
     private $CreditorInvoiceNumber;
 
-    /** @var $dueDate \DateTime */
+    /** @var \DateTime $DueDate */
     private $DueDate;
 
-    /** @var $departmentHandle DepartmentHandle */
+    /** @var DepartmentHandle $DepartmentHandle */
     private $DepartmentHandle;
 
-    /** @var $distributionKeyHandle DistributionKeyHandle */
+    /** @var DistributionKeyHandle $DistributionKeyHandle */
     private $DistributionKeyHandle;
 
-    /** @var $projectHandle ProjectHandle */
+    /** @var ProjectHandle $ProjectHandle */
     private $ProjectHandle;
 
-    /** @var $costTypeHandle CostTypeHandle */
+    /** @var CostTypeHandle $CostTypeHandle */
     private $CostTypeHandle;
 
-    /** @var $bankPaymentTypeHandle PaymentTypeHandle */
+    /** @var PaymentTypeHandle $BankPaymentTypeHandle */
     private $BankPaymentTypeHandle;
 
-    /** @var $bankPaymentCreditorId string */
+    /** @var string $BankPaymentCreditorId */
     private $BankPaymentCreditorId;
 
-    /** @var $bankPaymentCreditorInvoiceId string */
+    /** @var string $BankPaymentCreditorInvoiceId */
     private $BankPaymentCreditorInvoiceId;
 
-    /** @var $capitaliseHandle CapitaliseHandle */
+    /** @var CapitaliseHandle $CapitaliseHandle */
     private $CapitaliseHandle;
 
-    /** @var $startDate \DateTime */
+    /** @var \DateTime $StartDate */
     private $StartDate;
 
-    /** @var $endDate \DateTime */
+    /** @var \DateTime $EndDate */
     private $EndDate;
 
-    /** @var $employeeHandle EmployeeHandle */
+    /** @var EmployeeHandle $EmployeeHandle */
     private $EmployeeHandle;
 
     /**
      * CashBookEntry constructor.
      * @param null $soapObject
      */
-    public function __construct($soapObject)
+    public function __construct($soapObject = null)
     {
         $this->setHandle(new CashBookEntryHandle());
         $this->setCurrencyHandle(new CurrencyHandle());
@@ -137,6 +137,8 @@ class CashBookEntry extends EconomicSoapEntity
         $this->setBankPaymentTypeHandle(new PaymentTypeHandle());
         $this->setProjectHandle(new ProjectHandle());
         $this->setContraVatAccountHandle(new AccountHandle());
+        $this->setDate(date('c'));
+        $this->setDueDate(date('c'));
 
         parent::__construct($soapObject);
     }
@@ -410,18 +412,18 @@ class CashBookEntry extends EconomicSoapEntity
     /**
      * @return \DateTime
      */
-    public function getDateTime()
+    public function getDate()
     {
-        return $this->DateTime;
+        return $this->Date;
     }
 
     /**
-     * @param \DateTime $dateTime
+     * @param \DateTime $date
      * @return CashBookEntry
      */
-    public function setDateTime($dateTime)
+    public function setDate($date)
     {
-        $this->DateTime = $dateTime;
+        $this->Date = $date;
 
         return $this;
     }

@@ -11,20 +11,20 @@ class CashBook extends EconomicSoapEntity
     const CASH_BOOK_NAME = 'Name';
     const CASH_BOOK_ENTRIES = 'Entries';
 
-    /** @var $handle CashBookHandle */
+    /** @var CashBookHandle $Handle */
     private $Handle;
 
-    /** @var string $number */
+    /** @var string $Number */
     private $Number;
 
-    /** @var string $name */
+    /** @var string $Name */
     private $Name;
 
     /**
      * CashBook constructor.
      * @param null $soapObject
      */
-    public function __construct($soapObject)
+    public function __construct($soapObject = null)
     {
         $this->setHandle(new CashBookHandle());
         

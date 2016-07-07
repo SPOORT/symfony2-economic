@@ -88,7 +88,7 @@ class Debtor
                        ->getConnection()
                        ->Debtor_FindByEmail(['email' => $email]);
 
-        return null !== $result ? new DebtorHandleEntity($result->Debtor_FindByEmailResult) : null;
+        return !empty((array) $result) ? new DebtorHandleEntity($result->Debtor_FindByEmailResult) : null;
     }
 
     /**
@@ -130,7 +130,7 @@ class Debtor
                        ->getConnection()
                        ->Debtor_FindByNumber(['number' => $number]);
 
-        return null !== $result ? new DebtorHandleEntity($result->Debtor_FindByNumberResult) : null;
+        return !empty((array) $result) ? new DebtorHandleEntity($result->Debtor_FindByNumberResult) : null;
     }
 
     /**
@@ -172,7 +172,7 @@ class Debtor
                        ->getConnection()
                        ->Debtor_FindByTelephoneAndFaxNumber(['telephoneAndFaxNumber' => $telephoneAndFaxNumber]);
 
-        return null !== $result ? new DebtorHandleEntity($result->Debtor_FindByTelephoneAndFaxNumberResult) : null;
+        return !empty((array) $result) ? new DebtorHandleEntity($result->Debtor_FindByTelephoneAndFaxNumberResult) : null;
     }
 
     /**
@@ -227,7 +227,7 @@ class Debtor
             ->getConnection()
             ->$method(['debtorHandle' => $debtorHandleEntity]);
 
-        return null !== $data ? new DebtorHandleEntity($data->{'Debtor_Get' . $property . 'Result'}) : null;
+        return !empty((array) $data) ? new DebtorHandleEntity($data->{'Debtor_Get' . $property . 'Result'}) : null;
     }
 
     /**
@@ -243,7 +243,7 @@ class Debtor
             ->getConnection()
             ->Debtor_CreateFromData(['data' => $debtorEntity->asTerseAssociateArray()]);
 
-        return null !== $result ? $result->Debtor_CreateFromDataResult : null;
+        return !empty((array) $result) ? $result->Debtor_CreateFromDataResult : null;
     }
 
     /**
@@ -257,7 +257,7 @@ class Debtor
             ->getConnection()
             ->Debtor_UpdateFromData(['data' => $debtorEntity->asTerseAssociateArray()]);
 
-        return null !== $result ? $result->Debtor_UpdateFromDataResult : null;
+        return !empty((array) $result) ? $result->Debtor_UpdateFromDataResult : null;
     }
 
     /**
@@ -286,7 +286,7 @@ class Debtor
             ->getConnection()
             ->DebtorContact_Create(['debtorHandle' => $debtorHandleEntity, 'name' => $name]);
 
-        return null !== $result ? $result->DebtorContact_CreateResult : null;
+        return !empty((array) $result) ? $result->DebtorContact_CreateResult : null;
     }
 
     /**
@@ -300,6 +300,6 @@ class Debtor
             ->getConnection()
             ->Debtor_GetData(['entityHandle' => $debtorHandleEntity]);
 
-        return null !== $result ? new DebtorEntity($result->Debtor_GetDataResult) : null;
+        return !empty((array) $result) ? new DebtorEntity($result->Debtor_GetDataResult) : null;
     }
 }

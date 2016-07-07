@@ -3,6 +3,7 @@ parameters:
     symfony2_economic.debtor_entity.class: Spoort\Bundle\Symfony2EconomicBundle\Entity\Debtor
     symfony2_economic.creditor_entity.class: Spoort\Bundle\Symfony2EconomicBundle\Entity\Creditor
     symfony2_economic.cash_book_entity.class: Spoort\Bundle\Symfony2EconomicBundle\Entity\CashBook
+    symfony2_economic.account_entity.class: Spoort\Bundle\Symfony2EconomicBundle\Entity\Account
 
     symfony2_economic.account_handle_entity.class: Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\AccountHandle
     symfony2_economic.attention_handle_entity.class: Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\AttentionHandle
@@ -34,6 +35,7 @@ parameters:
     symfony2_economic.debtor_service.class: Spoort\Bundle\Symfony2EconomicBundle\Service\Debtor
     symfony2_economic.cash_book_service.class: Spoort\Bundle\Symfony2EconomicBundle\Service\CashBook
     symfony2_economic.cash_book_entry_service.class: Spoort\Bundle\Symfony2EconomicBundle\Service\CashBookEntry
+    symfony2_economic.account_service.class: Spoort\Bundle\Symfony2EconomicBundle\Service\Account
 
 services:
     symfony2_economic.soap_api_service:
@@ -58,5 +60,10 @@ services:
 
     symfony2_economic.cash_book_entry_service:
         class: '%symfony2_economic.cash_book_entry_service.class%'
+        arguments:
+            - '@symfony2_economic.soap_api_service'
+
+    symfony2_economic.account_service:
+        class: '%symfony2_economic.account_service.class%'
         arguments:
             - '@symfony2_economic.soap_api_service'

@@ -31,7 +31,7 @@ class Creditor
             ->getConnection()
             ->Creditor_FindByName(['name' => $name]);
 
-        return null !== $result ? new CreditorHandleEntity($result->Creditor_FindByEmailResult) : null;
+        return !empty((array) $result) ? new CreditorHandleEntity($result->Creditor_FindByEmailResult) : null;
     }
 
     /**
@@ -45,7 +45,7 @@ class Creditor
             ->getConnection()
             ->Creditor_FindByNumber(['number' => $number]);
 
-        return null !== $result ? new CreditorHandleEntity($result->Creditor_FindByNumberResult) : null;
+        return !empty((array) $result) ? new CreditorHandleEntity($result->Creditor_FindByNumberResult) : null;
     }
 
     /**
@@ -100,7 +100,7 @@ class Creditor
             ->getConnection()
             ->$method(['creditorHandle' => $creditorHandleEntity]);
 
-        return null !== $data ? new CreditorHandleEntity($data->{'Creditor_Get' . $property . 'Result'}) : null;
+        return !empty((array) $data) ? new CreditorHandleEntity($data->{'Creditor_Get' . $property . 'Result'}) : null;
     }
 
     /**
@@ -114,7 +114,7 @@ class Creditor
             ->getConnection()
             ->Creditor_CreateFromData(['data' => $creditorEntity->asTerseAssociateArray()]);
 
-        return null !== $result ? $result->Creditor_CreateFromDataResult : null;
+        return !empty((array) $result) ? $result->Creditor_CreateFromDataResult : null;
     }
 
     /**
@@ -128,7 +128,7 @@ class Creditor
             ->getConnection()
             ->Creditor_UpdateFromData(['data' => $creditorEntity->asTerseAssociateArray()]);
 
-        return null !== $result ? $result->Creditor_CreateFromDataResult : null;
+        return !empty((array) $result) ? $result->Creditor_UpdateFromDataResult : null;
     }
 
     /**
@@ -156,7 +156,7 @@ class Creditor
             ->getConnection()
             ->CreditorContact_Create(['creditorHandle' => $creditorHandleEntity, 'name' => $name]);
 
-        return null !== $result ? $result->CreditorContact_CreateResult : null;
+        return !empty((array) $result) ? $result->CreditorContact_CreateResult : null;
     }
 
     /**
@@ -170,6 +170,6 @@ class Creditor
             ->getConnection()
             ->Creditor_GetData(['entityHandle' => $creditorHandleEntity]);
 
-        return null !== $result ? new CreditorEntity($result->Creditor_GetDataResult) : null;
+        return !empty((array) $result) ? new CreditorEntity($result->Creditor_GetDataResult) : null;
     }
 }
