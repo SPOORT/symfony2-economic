@@ -3,7 +3,7 @@
 namespace Spoort\Bundle\Symfony2EconomicBundle\Entity\Enum;
 
 
-class CashBookEntryType
+class AccountType
 {
     const PROFIT_AND_LOSS = 'ProfitAndLoss';
     const STATUS = 'Status';
