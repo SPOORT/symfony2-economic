@@ -28,7 +28,7 @@ class CashBookEntry extends EconomicSoapEntity
     /** @var integer $Id2 */
     private $Id2;
 
-    /** @var CashBookEntryType $Type */
+    /** @var string $Type */
     private $Type;
 
     /** @var CashBookHandle $CashBookHandle */
@@ -676,7 +676,7 @@ class CashBookEntry extends EconomicSoapEntity
     }
 
     /**
-     * @return CashBookEntryType
+     * @return string
      */
     public function getType()
     {
@@ -684,7 +684,7 @@ class CashBookEntry extends EconomicSoapEntity
     }
 
     /**
-     * @param CashBookEntryType $type
+     * @param string $type
      * @return CashBookEntry
      */
     public function setType($type)

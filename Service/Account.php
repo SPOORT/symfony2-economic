@@ -51,7 +51,7 @@ class Account
     /**
      * Returns handle for debtor with a given number
      * @param $number
-     * @return AccountsHandleEntity|null
+     * @return AccountHandleEntity|null
      */
     public function findAccountByNumber($number)
     {
