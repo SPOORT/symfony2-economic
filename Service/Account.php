@@ -5,6 +5,7 @@ namespace Spoort\Bundle\Symfony2EconomicBundle\Service;
 use Doctrine\Instantiator\Exception\InvalidArgumentException;
 use Spoort\Bundle\Symfony2EconomicBundle\Service\SoapApi as SoapApiService;
 use Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\AccountHandle as AccountHandleEntity;
+use Spoort\Bundle\Symfony2EconomicBundle\Entity\Account as AccountEntity;
 
 class Account
 {

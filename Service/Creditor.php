@@ -2,6 +2,7 @@
 
 namespace Spoort\Bundle\Symfony2EconomicBundle\Service;
 
+use InvalidArgumentException;
 use Spoort\Bundle\Symfony2EconomicBundle\Service\SoapApi as SoapApiService;
 use Spoort\Bundle\Symfony2EconomicBundle\Entity\Creditor as CreditorEntity;
 use Spoort\Bundle\Symfony2EconomicBundle\Entity\Handle\CreditorHandle as CreditorHandleEntity;
