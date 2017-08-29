@@ -1,8 +1,8 @@
 {
   "name": "spoort/symfony2-economic-bundle",
-  "version": "1.0",
+  "version": "1.0.1",
   "description": "Integration between Symfony2 and e-conomic.dk",
-  "keywords": ["e-conomic.dk", "symfony2", "SPOORT International ApS", "GoSpoort"],
+  "keywords": ["e-conomic", "e-conomic.dk", "economic", "economics", "symfony2", "SPOORT International ApS", "GoSpoort"],
   "type": "symfony-bundle",
   "license": "MIT",
   "authors": [
